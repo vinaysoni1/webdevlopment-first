@@ -1,0 +1,41 @@
+console.log("Hey this s tutirial number 55");
+
+var a = 5;
+var a=a+5; 
+    // valid statement because var value can be change
+// let b= 6;
+
+  // let c = "vinay soni";
+//  var _a = "vinay soni";   // valid varible
+//  var 44a = "vinay soni";  //invalid varible  // not allowed
+{
+    let a=8;
+    console.log(a);
+}
+console.log(a);
+
+
+//  console.log(a+b+8);
+//  console.log(typeof a, typeof b, typeof c);
+
+
+//  const a1=5; 
+//  a1=a1+5;    // invalid statement beacause const value cannot be change 
+//  console.log(a1);  // not allowed
+
+let x = "vinay soni";
+let y = 18;
+let z = 18.24;
+let p = true;
+let q = null;
+let r = undefined;
+console.log(typeof x, typeof y, typeof z, typeof p, typeof q, typeof r)
+let o ={
+      "Name"  : "vinay soni",
+    "job code" : "555"
+}
+console.log(o);
+o.age=19;
+console.log(o);
+o.age=20;
+console.log(o);

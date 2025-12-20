@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form - lets learn it</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>SELF INTRODUCTION</h1>
+    <form action ="POST">
+        <div>
+        <lable for ="username">ENTER YOUR NAME:- </lable>
+        <input type ="text" id ="username" name ="username" placeholder ="enter your user name">
+        </div>
+         <div>
+        <lable for ="program">PROGRAM:- </lable>
+        <input type ="text" id ="program" name ="program" placeholder ="enter your program">
+        </div>
+         <div>
+        <lable for ="branch">BRANCH:- </lable>
+        <input type ="branch" id ="branch" name ="branch" placeholder ="enter your branch">
+        </div>
+        <div>
+        <lable for ="college name"> COLLEGE NAME </lable>
+        <input type ="college" id ="college" name ="branch">
+        </div>
+        <div>
+            <lable for ="zender">ZENDER :- </lable>
+            <lable for ="male">MALE</lable>
+            <input type ="radio"  id="male" name="zender" value="male">
+            <lable for ="female">FEMALE</lable>
+            <input type ="radio"  id="female" name="zender" value="female">
+        </div>
+         <!-- <div>
+        <lable for ="checkbox">SUBCRIBE TO NEW LETTER:-</lable>
+        <input type ="checbox" id ="checkbox" name ="checkbox" value="yes">
+        </div> -->
+        <!-- <div>
+            <lable for ="comment">ENTER YOUR COMMENT:-</lable>
+            <br>
+            <textarea id ="comment" name ="comment" placeholder ="comment.." row="500" column="500"></textarea>
+        </div> -->
+        <!-- <div>
+            <select name="fruits"> 
+                <option value="banana">BANANA</option>
+                <option value="apple">APPLE</option>
+                <option value="grips">GRIPS</option>
+                <option value="papaya">PAPAYA</option>
+                FRUEITS
+            </select>
+        </div> -->
+        <div>
+            <label for="mobile number">MOBILE NUMBER:-</label>
+            <input id ="mobile" name="mobile" value="tel" pattern="^[6-9]\d{9}$" tittle="Enter a 10-digit indian mobile number starting with 6-9" required>
+        </div>
+    </form>
+</body>
+</html>

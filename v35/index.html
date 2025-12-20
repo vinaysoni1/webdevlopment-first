@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> On  more CSS selector</title>
+    <style>
+        /* /* .box:first-child{
+            background-color: brown;
+        }
+        .box::first-line{
+            color: blue; */
+
+      
+        /* .boxes *{
+            color: rgb(62, 18, 221);
+            border:2px solid black;
+        }
+        p, a, .box, [data-color="primary"]{(gruoping) 
+          padding: 40px;
+        } */
+         /* use odd & even */
+         /* .box:nth-child(odd){   
+            
+            background-color: aqua;
+         } */
+          /* use no. */
+         /* .box:nth-last-child(2){
+            background-color: blue;
+          } */
+           .boxes::before{
+            content: "vinay is good";
+            background-color: chartreuse;
+           }
+            .boxes::after{
+            content: "vinay is also good";
+            background-color: rgb(4, 63, 255);
+           }
+           ::selection{
+            color: aqua;
+            background-color: black;
+           }
+           .box::first-letter{
+            color: chocolate;
+            font-size: 40px;
+           }
+           input::placeholder{
+            color: blue;
+           }
+    </style>
+</head>
+<body>
+    <div class="boxes">
+        <!-- <div class="box">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi aliquid atque modi pariatur laudantium, culpa expedita placeat laborum? Illum quae ut nesciunt recusandae enim itaque cum maiores. Vitae odit ullam asperiores repudiandae dignissimos quos laudantium quasi! Asperiores molestiae, corporis suscipit ipsam voluptatibus perferendis fugiat quisquam delectus ut. Veritatis provident, quam corporis nisi velit, architecto odio, quod voluptatum quibusdam ea dolorum inventore minus officiis at atque obcaecati dolorem laboriosam. Earum odio veniam facilis, quam aspernatur ipsa optio possimus quae adipisci, laborum autem odit a vitae facere pariatur sed aut sunt soluta! Ab molestias dolorem aperiam quis corporis ut incidunt ex molestiae! -->
+ 
+        <div data-color="primary" class="box">hey i am box</div>
+        <div class="box">hey i am box</div>
+        <div class="box">hey i am box</div>
+        <input type="text" placeholder="enter your name" >
+       
+    </div>
+    
+</body>
+</html>

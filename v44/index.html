@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ultraedit</title>
+    <style>
+        .logo {}
+
+        .logo img {
+            width: 164px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-family: "Segoe UI";
+            border: 1px solid black;
+            background-color: rgb(224, 218, 218);
+           position: relative;
+         
+         
+        }
+
+        .right ul {
+            display: flex;
+            gap: 34px;
+        }
+
+        .right ul li {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .right ul li span {
+            padding: 0 5px;
+        }
+
+        .main {
+            display: flex;
+            justify-content: center;
+            font-family: 'Inter', Helvetica, Arial, Lucida, sans-serif;
+            margin-top: 15px;
+            font-size: 20px;
+        }
+
+        .first {
+            display: flex;
+            justify-content: center;
+            font-family: 'Inter', Helvetica, Arial, Lucida, sans-serif;
+            margin-top: 15px;
+            font-size: 30px;
+            color: gray;
+
+        }
+
+        .box {
+            border: 1px solid #fcb900;
+            height: 45px;
+            width: 280px;
+            justify-self: center;
+            margin-top: 25px;
+            background-color: #fcb900;
+            border-radius: 4px;
+            display: flex;
+
+
+            padding: 5px;
+
+        }
+
+        .box p {
+            display: flex;
+            justify-self: center;
+        }
+
+        .box span {
+            display: inline;
+            display: inline-flex;
+            height: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        }
+
+
+
+        .container {
+            /* border:2px solid black; */
+            display: grid;
+            /* grid-template-columns: 150px 120px;
+            grid-template-rows: 100px 100px 100px; */
+            width: 80vh;
+            height: 80vh;
+            grid-template-columns: 2fr 3fr 2fr;
+            gap: 10px 30px;
+            align-items: center;
+
+            /* justify-self: center; */
+            margin-left: 400px;
+            margin-top: 60px;
+        }
+
+        .container .box1 {
+            border: 2px solid gainsboro;
+            height: 250px;
+            width: 500px;
+            background-color: gainsboro;
+            border-radius: 10px;
+
+
+        }
+
+        .box1 p {
+            justify-self: center;
+            font-size: 25px;
+            margin-top: 8px;
+        }
+
+        .box1 p1 {
+            justify-items: center;
+            font-size: 25px;
+            padding: 70px;
+            padding-top: 0%;
+            vertical-align: baseline;
+            -webkit-box-sizing: border-box;
+            margin: 65px;
+
+
+        }
+
+        .botten {
+
+
+            font-size: 14px;
+            */ */ -webkit-text-size-adjust: 100%;
+            vertical-align: baseline;
+            background: transparent;
+            background-color: #fcb900;
+            webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            display: block;
+            unicode-bidi: isolate;
+            /* max-width: 425px; */
+            background-color: #fcb900;
+            padding: 10px;
+            text-align: center;
+            border-radius: 13px;
+            width: 40%;
+            max-width: 302px;
+            background-color: #fcb900;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+            font-family: 'Inter';
+
+            line-height: 1.4em;
+
+            margin: 15px;
+            justify-self: center;
+
+        }
+
+        .url p {
+            display: inline;
+            margin: 200px;
+            font-size: 25px;
+        }
+
+        .url span {
+            display: inline;
+            margin: 10px;
+            font-size: small;
+
+        }
+
+        .box2 p {
+            justify-content: center;
+            font-size: 25px;
+        }
+
+        .box2 p1 {
+            margin: 120px;
+            font-size: 35px;
+
+        }
+
+
+        .box2 .botten {
+            font-size: 14px;
+            */ */ -webkit-text-size-adjust: 100%;
+            vertical-align: baseline;
+            background: transparent;
+            background-color: #fcb900;
+            webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            display: block;
+            unicode-bidi: isolate;
+            /* max-width: 425px; */
+            background-color: #fcb900;
+            padding: 10px;
+            text-align: center;
+            border-radius: 13px;
+            width: 40%;
+            max-width: 302px;
+            background-color: #fcb900;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+            font-family: 'Inter';
+
+            line-height: 1.4em;
+
+            margin: 15px;
+            justify-self: center;
+
+        }
+
+        .box3 p {
+            justify-content: center;
+            font-size: 25px;
+        }
+
+        .box3 p1 {
+            margin: 140px;
+            font-size: 35px;
+
+        }
+
+        .box3 .botten {
+            font-size: 14px;
+            */ */ -webkit-text-size-adjust: 100%;
+            vertical-align: baseline;
+            background: transparent;
+            background-color: #fcb900;
+            webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            display: block;
+            unicode-bidi: isolate;
+            /* max-width: 425px; */
+            background-color: #fcb900;
+            padding: 10px;
+            text-align: center;
+            border-radius: 13px;
+            width: 40%;
+            max-width: 302px;
+            background-color: #fcb900;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+            font-family: 'Inter';
+
+            line-height: 1.4em;
+
+            margin: 15px;
+            justify-self: center;
+        }
+
+        .box4 p {
+            justify-content: center;
+            font-size: 25px;
+        }
+
+        .box4 p1 {
+            margin: 130px;
+            font-size: 35px;
+
+        }
+
+        .box4 .botten {
+            font-size: 14px;
+            */ */ -webkit-text-size-adjust: 100%;
+            vertical-align: baseline;
+            background: transparent;
+            background-color: #fcb900;
+            webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            display: block;
+            unicode-bidi: isolate;
+            /* max-width: 425px; */
+            background-color: #fcb900;
+            padding: 10px;
+            text-align: center;
+            border-radius: 13px;
+            width: 40%;
+            max-width: 302px;
+            background-color: #fcb900;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+            font-family: 'Inter';
+
+            line-height: 1.4em;
+
+            margin: 15px;
+            justify-self: center;
+        }
+
+        .box5 p {
+            justify-content: center;
+            font-size: 25px;
+        }
+
+        .box5 p1 {
+            margin: 130px;
+            font-size: 35px;
+
+        }
+
+        .box5 .botten {
+            font-size: 14px;
+            */ */ -webkit-text-size-adjust: 100%;
+            vertical-align: baseline;
+            background: transparent;
+            background-color: #fcb900;
+            webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            display: block;
+            unicode-bidi: isolate;
+            /* max-width: 425px; */
+            background-color: #fcb900;
+            padding: 10px;
+            text-align: center;
+            border-radius: 13px;
+            width: 40%;
+            max-width: 302px;
+            background-color: #fcb900;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+            font-family: 'Inter';
+
+            line-height: 1.4em;
+
+            margin: 15px;
+            justify-self: center;
+        }
+        .box6 p {
+            justify-content: center;
+            font-size: 25px;
+        }
+
+        .box6 p1 {
+            margin: 50px;
+            font-size: 30px;
+            display: inline;
+
+        }
+
+        .box6 .botten {
+            font-size: 14px;
+            */ */ -webkit-text-size-adjust: 100%;
+            vertical-align: baseline;
+            background: transparent;
+            background-color: #fcb900;
+            webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            display: block;
+            unicode-bidi: isolate;
+            /* max-width: 425px; */
+            background-color: #fcb900;
+            padding: 10px;
+            text-align: center;
+            border-radius: 13px;
+            width: 40%;
+            max-width: 302px;
+            background-color: #fcb900;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+            font-family: 'Inter';
+
+            line-height: 1.4em;
+
+            margin: 15px;
+            justify-self: center;
+        }
+        .box7 p {
+            justify-content: center;
+            font-size: 25px;
+        }
+
+        .box7 p1 {
+            margin: 110px;
+            font-size: 35px;
+
+        }
+
+        .box7 .botten {
+            font-size: 14px;
+            */ */ -webkit-text-size-adjust: 100%;
+            vertical-align: baseline;
+            background: transparent;
+            background-color: #fcb900;
+            webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            display: block;
+            unicode-bidi: isolate;
+            /* max-width: 425px; */
+            background-color: #fcb900;
+            padding: 10px;
+            text-align: center;
+            border-radius: 13px;
+            width: 40%;
+            max-width: 302px;
+            background-color: #fcb900;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+            font-family: 'Inter';
+
+            line-height: 1.4em;
+
+            margin: 15px;
+            justify-self: center;
+        }
+
+        .box8 p {
+            justify-content: center;
+            font-size: 25px;
+        }
+
+        .box8 p1 {
+            margin: 130px;
+            font-size: 35px;
+
+        }
+
+        .box8 .botten {
+            font-size: 14px;
+            */ */ -webkit-text-size-adjust: 100%;
+            vertical-align: baseline;
+            background: transparent;
+            background-color: #fcb900;
+            webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            display: block;
+            unicode-bidi: isolate;
+            /* max-width: 425px; */
+            background-color: #fcb900;
+            padding: 10px;
+            text-align: center;
+            border-radius: 13px;
+            width: 40%;
+            max-width: 302px;
+            background-color: #fcb900;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+            font-family: 'Inter';
+
+            line-height: 1.4em;
+
+            margin: 15px;
+            justify-self: center;
+        }
+        .box9 p {
+            justify-content: center;
+            font-size: 25px;
+        }
+
+        .box9 p1 {
+            margin: 130px;
+            font-size: 35px;
+
+        }
+
+        .box9 .botten {
+            font-size: 14px;
+            */ */ -webkit-text-size-adjust: 100%;
+            vertical-align: baseline;
+            background: transparent;
+            background-color: #fcb900;
+            webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            display: block;
+            unicode-bidi: isolate;
+            /* max-width: 425px; */
+            background-color: #fcb900;
+            padding: 10px;
+            text-align: center;
+            border-radius: 13px;
+            width: 40%;
+            max-width: 302px;
+            background-color: #fcb900;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+            font-family: 'Inter';
+
+            line-height: 1.4em;
+
+            margin: 15px;
+            justify-self: center;
+        }
+        .box10 p {
+            justify-content: center;
+            font-size: 25px;
+        }
+
+        .box10 p1 {
+            margin: 40px;
+            font-size: 35px;
+
+        }
+
+        .box10 .botten {
+            font-size: 14px;
+            */ */ -webkit-text-size-adjust: 100%;
+            vertical-align: baseline;
+            background: transparent;
+            background-color: #fcb900;
+            webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            display: block;
+            unicode-bidi: isolate;
+            /* max-width: 425px; */
+            background-color: #fcb900;
+            padding: 10px;
+            text-align: center;
+            border-radius: 13px;
+            width: 40%;
+            max-width: 302px;
+            background-color: #fcb900;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+            font-family: 'Inter';
+
+            line-height: 1.4em;
+
+            margin: 15px;
+            justify-self: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="https://www.ultraedit.com/wp-content/uploads/2023/01/Dark-logo.png" alt="">
+            </div>
+            <div class="right">
+                <ul>
+                    <li><span>Products </span><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M6 9L11.2929 14.2929C11.6262 14.6262 11.7929 14.7929 12 14.7929C12.2071 14.7929 12.3738 14.6262 12.7071 14.2929L18 9"
+                                stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </li>
+                    <li><span>Pricing </span><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M6 9L11.2929 14.2929C11.6262 14.6262 11.7929 14.7929 12 14.7929C12.2071 14.7929 12.3738 14.6262 12.7071 14.2929L18 9"
+                                stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </li>
+                    <li><span>Resources </span><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M6 9L11.2929 14.2929C11.6262 14.6262 11.7929 14.7929 12 14.7929C12.2071 14.7929 12.3738 14.6262 12.7071 14.2929L18 9"
+                                stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </li>
+                    <li><span>About Us </span><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M6 9L11.2929 14.2929C11.6262 14.6262 11.7929 14.7929 12 14.7929C12.2071 14.7929 12.3738 14.6262 12.7071 14.2929L18 9"
+                                stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </li>
+                    <li>
+                        <img src="https://www.ultraedit.com/wp-content/themes/Divi_Child/img/Lang.png" alt="">
+            </div>
+
+            </li>
+            </ul>
+            </div>
+        </nav>
+        <div class="main">
+
+            <p>
+                Download UltraEdit for Windows
+                <span><img src="image-1-1-1.svg" height="18"></span>
+            </p>
+
+
+        </div>
+        <div class="first">
+            Download and try UltraEdit before you buy it! This download
+            includes the full Windows version of the text editor.
+        </div>
+        <div class="box">
+            <a href="https://www.ultraedit.com/downloads/uex-thank-you/">
+                <p>
+                    <span>
+                        <img src="apple-stroke-rounded (1).svg" alt="">
+                    </span>
+
+                    Download Mac or Linux version
+                    <span>
+                        <img src="arrow-right-02-stroke-rounded copy.svg">
+                    </span>
+                </p>
+            </a>
+        </div>
+
+        <div class="container">
+            <div class="box1">
+                <p>
+                    English
+                </p>
+                <p1> Includes all languages</p1>
+                <div class="botten">
+                    <a
+                        href="https://downloads.ultraedit.com/main/ue/win/ue_allinone.exe?_gl=1*1r35789*_gcl_au*MTIxMjIxMjY2My4xNzYyNjE0NjUx*_ga*MzQyOTIwMzIwLjE3NjI2MTQ2NTY.*_ga_QNXHVTPWNS*czE3NjMwNTI1ODgkbzkkZzEkdDE3NjMwNTU4NjYkajYwJGwwJGg0NzAwMjQ2NDM." class="btn btn-download">
+                        Download 64 bits
+                    </a>
+                </div>
+                <div class="url">
+                    <p>
+                        SHA256
+                    </p>
+                    <span>
+                        64B95FA0C6F64CD3B6AD19A01AA74E4F303CC12C3B96F1AA129E0F632D8A1C8D
+                    </span>
+                </div>
+            </div>
+            <div class="box1">
+                <div class="box2">
+                    <p>Deutsch
+                    </p>
+                    <p1>Germen</p1>
+                    <div class="botten">
+                        <a
+                            href="https://downloads.ultraedit.com/main/ue/win/ue_german_64.exe?_gl=1*17u3b2l*_gcl_au*MTIxMjIxMjY2My4xNzYyNjE0NjUx*_ga*MzQyOTIwMzIwLjE3NjI2MTQ2NTY.*_ga_QNXHVTPWNS*czE3NjMxMTU3NjgkbzExJGcwJHQxNzYzMTE1NzY5JGo1OSRsMCRoMTAxNDMwMzMxNg..">
+                            Download 64 bits</a>
+                    </div>
+                    <div class="url">
+                        <p>
+                            SHA256
+                        </p>
+                        <span>
+                            E28CD2AD874AF70FA19F40EA38B0CF6D713428B48C1E8071BF29346F22E471AF
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="box1">
+                <div class="box3">
+                    <p>Italiano
+
+                    </p>
+                    <p1>Italian</p1>
+                    <div class="botten">
+                        <a
+                            href="https://downloads.ultraedit.com/main/ue/win/ue_italian_64.exe?_gl=1*a210tw*_gcl_au*MTIxMjIxMjY2My4xNzYyNjE0NjUx*_ga*MzQyOTIwMzIwLjE3NjI2MTQ2NTY.*_ga_QNXHVTPWNS*czE3NjMxMzYwMjYkbzEyJGcxJHQxNzYzMTM2ODkzJGo2MCRsMCRoNTA3MTM2NTQ3">Download
+                            64 bits</a>
+                    </div>
+                    <div class="url">
+                        <p>
+                            SHA256
+                        </p>
+                        <span>
+                            2151AE87669109ABFF9C59D649B6A1DFBE5248887B30197EF030073D7A0541AA
+                        </span>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="box1">
+                <div class="box4">
+                    <p>
+                        Español
+                    </p>
+                    <p1>
+                        Spanish
+                    </p1>
+                    <div class="botten">
+                        <a
+                            href="https://downloads.ultraedit.com/main/ue/win/ue_spanish_64.exe?_gl=1*7r9kyz*_gcl_au*MTIxMjIxMjY2My4xNzYyNjE0NjUx*_ga*MzQyOTIwMzIwLjE3NjI2MTQ2NTY.*_ga_QNXHVTPWNS*czE3NjMxMzYwMjYkbzEyJGcxJHQxNzYzMTM3NTc3JGozNCRsMCRoNTA3MTM2NTQ3">Download
+                            64-bit</a>
+                    </div>
+                    <div class="url">
+                        <p>
+                            SHA256
+                        </p>
+                        <span>
+                            310133F6E6106FC5CB2F773C15F3C6CF11078EE2010341A5689CFF89A5249E26
+                        </span>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="box1">
+                <div class="box5">
+                    <p>
+                        français
+
+                    </p>
+                    <p1>
+                        French
+                    </p1>
+                    <div class="botten">
+                        <a
+                            href="https://downloads.ultraedit.com/main/ue/win/ue_french_64.exe?_gl=1*1lnsd81*_gcl_au*MTIxMjIxMjY2My4xNzYyNjE0NjUx*_ga*MzQyOTIwMzIwLjE3NjI2MTQ2NTY.*_ga_QNXHVTPWNS*czE3NjMxMzYwMjYkbzEyJGcxJHQxNzYzMTM3NjM1JGo1OSRsMCRoNTA3MTM2NTQ3">Download
+                            64-bit</a>
+                    </div>
+                    <div class="url">
+                        <p>
+                            SHA256
+                        </p>
+                        <span>
+                           CDE2BD23594A0F64FA917DA7CD6DA2DC0D7DA87707BF52F85C6EBD42C5740069
+                        </span>
+                    </div>
+
+
+                </div>
+
+            </div>
+            <div class="box1">
+                <div class="box6">
+                    <p>
+                       Português brasileiro
+
+
+                    </p>
+                    <p1>
+                        Brazilian Portuguese
+                    </p1>
+                    <div class="botten">
+                        <a
+                           href="https://downloads.ultraedit.com/main/ue/win/ue_portuguese_64.exe">Download
+                            64-bit</a>
+                    </div>
+                    <div class="url">
+                        <p>
+                            SHA256
+                        </p>
+                        <span>
+                           78393C287890798FF5F1AC5FF47D0804CA33C5657BEAC363670D2880DF7249AF
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+            <div class="box1">
+                <div class="box7">
+                    <p>
+                       日本
+
+                    </p>
+                    <p1>
+                        Japanese
+                    </p1>
+                    <div class="botten">
+                        <a
+                           href="https://downloads.ultraedit.com/main/ue/win/ue_japanese_64.exe?_gl=1*1co6bli*_gcl_au*MTIxMjIxMjY2My4xNzYyNjE0NjUx*_ga*MzQyOTIwMzIwLjE3NjI2MTQ2NTY.*_ga_QNXHVTPWNS*czE3NjMxMzYwMjYkbzEyJGcxJHQxNzYzMTM4NTg4JGo2MCRsMCRoNTA3MTM2NTQ3">Download
+                            64-bit</a>
+                    </div>
+                    <div class="url">
+                        <p>
+                            SHA256
+                        </p>
+                        <span>
+                           0A74B5BAC442664B2316CB2F93D0F0C0B6F29D0644C41A3BFA32F57AC6DBEA0B
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+            <div class="box1">
+                <div class="box8">
+<p>
+            한국어
+
+
+                    </p>
+                    <p1>
+                        Korean
+                    </p1>
+                    <div class="botten">
+                        <a
+                            href="https://downloads.ultraedit.com/main/ue/win/ue_korean_64.exe">Download
+                            64-bit</a>
+                    </div>
+                    <div class="url">
+                        <p>
+                            SHA256
+                        </p>
+                        <span>
+                           FF5E739331D6888C5C41C49755DE772F9009FDFC617CA5E467895AF9E25496DF
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+            <div class="box1">
+                <div class="box9">
+<p>
+                        华语
+
+                    </p>
+                    <p1>
+                        Chinese
+                    </p1>
+                    <div class="botten">
+                        <a
+                            href="https://downloads.ultraedit.com/main/ue/win/ue_chinese_64.exe">Download
+                            64-bit</a>
+                    </div>
+                    <div class="url">
+                        <p>
+                            SHA256
+                        </p>
+                        <span>
+                          0343A265060AED77D311FAA96E7B78234E37497F46687D1C8724F1D63AB9B113
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+            <div class="box1">
+                <div class="box10">
+<p>
+                        華語
+
+
+                    </p>
+                    <p1>
+                        Traditional Chinese
+                    </p1>
+                    <div class="botten">
+                        <a
+                           href="https://downloads.ultraedit.com/main/ue/win/ue_chinese_traditional_64.exe" >Download
+                            64-bit</a>
+                    </div>
+                    <div class="url">
+                        <p>
+                            SHA256
+                        </p>
+                        <span>
+                           FF56F6098FC6D8E897D8EB6378CFA245C048C37D6A92BCF59224CC82A4107297
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </header>
+</body>
+
+</html>

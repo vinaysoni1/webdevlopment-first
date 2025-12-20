@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transition </title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+        .container{
+            background-color: rgb(234, 17, 198);
+            height: 50vh;
+            width: 70vw;
+        }
+        .box{
+            background-color: aqua;
+             height: 10vh;
+            width: 15vw;
+            transition-property:background-color , transform , scale;
+            transition-duration: 5s ;
+            transition-timing-function: ease-in-out;
+            transition-delay:  2s;
+        }
+        .translate{
+            transform:translateX(20vh) translateY(20vh) scale(2);
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box translate">
+
+        </div>
+    </div>
+    
+</body>
+</html>

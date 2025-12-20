@@ -1,0 +1,1 @@
+console.log("Exercise number 10 solution is completed");

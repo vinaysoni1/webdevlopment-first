@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Specificity and CASCADE</title>
+    <style>
+        
+        
+        /*  The specificity of this selector is 10  */
+        .cred {
+            background-color: chocolate;
+        }
+/*  The specificity of this selector is 10  */
+        .cpurple {
+            background-color: cornflowerblue ;
+        }
+/*  The specificity of this selector is 10 +1 */
+        h1.cgreen {
+            background-color: darkmagenta;
+        }
+/*  The specificity of this selector is 10  */
+        .yellow {
+            background-color: aqua;
+        }
+        /*  The specificity of this selector is 1  */
+        h1{
+            background-color: brown;
+        }
+        /*  The specificity of this selector is 0  */
+        /* *{
+           background-color: fuchsia;
+            margin: 0;
+            padding: 0;
+    }*/
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1 class ="yellow cred cpurple cgreen" data-x="a"> CSS Specificity</h1>
+    </div>
+
+</body>
+
+</html>

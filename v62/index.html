@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise - 10</title>
+</head>
+<body>
+    <Script>
+    let  rand=Math.random();
+    let first, second, third;
+
+    //fisrt ganerate adjective
+    if(rand<0.33){
+        first="crazy";
+    }
+    else if(rand<0.66 && rand>=0.33){
+        first="amazing";
+    }
+    else{
+        first="fire";
+    }
+// second generate shop name
+    rand=Math.random();
+    if(rand<0.33){
+        second="Foods"; 
+    }
+    else if(rand<0.66 && rand>=0.33){
+        second="Engine";
+    }
+    else{
+        second="Garments";
+    }
+
+    // third generate another word
+    rand=Math.random();
+    if(rand<0.33){
+        third="bros";   
+    }
+    else if(rand<0.66 && rand>=0.33){
+        third="hub";
+    }
+    else{
+        third="limited";
+    }
+    console.log(`${first} ${second} ${third}`);
+    </Script>
+    
+</body>
+</html>
