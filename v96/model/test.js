@@ -1,9 +1,10 @@
-import mongoose from "mongoose";
+import mongoose, { Types } from "mongoose";
 
 const testSchema = new mongoose.Schema({
-    title: String,
+    title: {Types:String, require:true, default:" Hello Dosto!!"},
     desc: String,
-    isDone: Boolean
+    isDone: Boolean,
+    Days: Number
 });
 
 export const Test = mongoose.model('Test', testSchema);
