@@ -1,0 +1,109 @@
+/* Reset default margin/padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar container */
+nav {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    padding: 3px;
+
+}
+
+/* Navbar links */
+nav a {
+    /* color: white; */
+    text-decoration: none;
+    padding: 2px 8px;
+}
+
+.warning {
+    color: #8f8f8f;
+    font-size: 15px;
+    font-family: "Gill Sans", sans-serif;
+}
+
+.I {
+    color: #8f8f8f;
+    font-size: 15px;
+    font-family: "Gill Sans", sans-serif
+}
+
+.data {
+    color: #8f8f8f;
+    font-size: 15px;
+    font-family: "Gill Sans", sans-serif;
+}
+
+.forensics {
+    color: #8f8f8f;
+    font-size: 15px;
+    font-family: "Gill Sans", sans-serif;
+}
+
+.advertising {
+    color: #8f8f8f;
+    font-size: 15px;
+    font-family: "Gill Sans", sans-serif;
+}
+
+.super {
+    color: #8f8f8f;
+    font-size: 15px;
+    font-family: "Gill Sans", sans-serif;
+}
+
+.Icon {
+    font-size: 20px;
+    font-weight: 100;
+    color: white;
+    text-decoration: none;
+    font-family: Solis, Arial, Helvetica, sans-serif !important;
+    /* margin-right: auto; */
+    margin-left: 15px;
+}
+
+.container img {
+    background-size: cover;
+    background-attachment: fixed; 
+    width: 100%;
+    height: 70vh;
+}
+
+@media (min-width: 1025px) {
+    .container {
+        background-size: cover;
+        background-attachment: fixed; 
+        /* width: 100%;
+        height: 30vh; */
+        background-image: url("assets/1920x450.jpg");
+
+    }
+}
+
+@media (max-width: 1025px) {
+    .container {
+        background-size: cover;
+        background-attachment: fixed; 
+        width: 100%;
+        height: 30vh;
+        background-image: url("assets/1920x450.jpg");
+
+    }
+}
+@media (min-width: 800px) {
+     .container {
+         background-size: cover;
+         background-attachment: fixed; 
+         width: 100%;
+         height: 30vh;
+         background-image: url("assets/800x450.jpg");
+        /* flex-direction: hidden;
+        align-items: flex-start; */
+        /* display: none; */
+    }
+}
