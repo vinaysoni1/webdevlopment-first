@@ -6,8 +6,12 @@
 }
 
 body {
-    height: 100%;
+    height: 70%;
     width: 100%;
+    background-image: url("assets/1920x450.jpg");
+    /* background-image:url("background2.jpg"); */
+    background-size: cover;
+    background-position: center;
 }
 
 .main-screen {
@@ -99,32 +103,42 @@ nav a {
 
 /* second header */
 .second-header {
-    border: 2px solid black;
+    /* border: 2px solid black; */
     box-sizing: border-box;
-    height: 45px;
+    height: 127px;
     margin-top: 1px;
+    display: flex;
 }
 
 .header {
-    border: 2px solid black;
+    /* border: 2px solid black; */
     height: fit-content;
     width: fit-content;
-    justify-self: center;
+    justify-self: flex-start;
+    margin-left: 200px;
+     /* height: 120px;
+    width: 240px; */
 }
 
 
 
 .second-header img {
-    height: 20px;
-    width: 140px;
+    height: 120px;
+    width: 240px;
+    margin-top: 0px;
+}
+.menu {
+    /* display: none; */
+    margin-left: auto;
+    margin-right: 88px;
+    margin-top: 34px;
+}
+.menu img{
+    height: 30px;
+    width: fit-content
+    
 }
 
-.second-header .Icon {
-    height: 20px;
-    width: 140px;
-    color: black;
-    margin-left: -119px;
-}
 
 
 @media screen and (max-width: 1020px) {
@@ -136,7 +150,45 @@ nav a {
     .header {
         margin-top: 0%;
         float: left;
+        margin-left: 35px;
+        overflow: overlay;
 
     }
+
+}
+
+@media screen and (max-width: 1020px) {
+    body {
+        background-image: url("background2.jpg");
+
+        background-size: cover;
+        background-position: center;
+    }
+
+}
+
+.container {
+    /* border: 2px solid black; */
+   height: 50vh;
+   width: auto;
+   border: 2px solid black;
+   margin-top: 60px;
+}
+.main-box{
+    margin: 43px 300px;
+    border: 2px solid black;
+    height: 40vh;
+
+
+}
+.main-box .search{
+     height: 45px;
+    width: 60vh;
+    margin-left: 30vh;
+    margin-top: 35px;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: Solis, Arial, Helvetica, sans-serif;
+    border-radius: 10px;
 
 }
