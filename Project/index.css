@@ -189,7 +189,7 @@ nav a {
 }
 
 .InputContainer {
-    width: 70vh;
+    width: 80vh;
     height: 47px;
     display: flex;
     align-items: center;
@@ -212,20 +212,214 @@ nav a {
     caret-color: rgb(255, 81, 0);
     background-color: rgb(255, 255, 255);
     border-radius: 3px;
-    padding-left:6px;
+    padding-left: 6px;
     letter-spacing: 0.8px;
     color: rgb(19, 19, 19);
     font-size: 20px;
-     font-family: Solis, Arial, Helvetica, sans-serif;
+    font-family: Solis, Arial, Helvetica, sans-serif;
 
 }
-#search{
+
+#search {
     height: 25px;
     width: 25px;
     margin: 15px;
 }
-#option{
-        height: 20px;
-    width: 20px;
+
+/* #option {
+    height: 29px;
+    width: fit-content;
     margin-right: 28px;
+    cursor: pointer;
+    padding: 0 20px;
+    position: relative;
+    color:rgb(0, 0, 0);
+    font-stretch: normal;
+    font-family: Solis, Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0px;
+    line-height: normal;
+    margin: 17px;
+    overscroll-behavior: none;
+    border:none
+}
+#list{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    
+}
+select:hover {
+    color: rgb(228, 0, 0);
+    border: none;
+} */
+
+
+
+select,
+::picker(select) {
+    appearance: base-select;
+}
+
+/* * {
+  box-sizing: border-box;
+} */
+
+/* html {
+  font-family: "Helvetica", "Arial", sans-serif;
+} */
+/* 
+body {
+  width: 100%;
+  padding: 0 10px;
+  max-width: 480px;
+  margin: 0 auto;
+} */
+
+h2 {
+    font-size: 1.2rem;
+}
+
+p {
+    display: flex;
+    gap: 10px;
+    margin: 50px
+}
+
+label {
+    width: fit-content;
+    align-self: center;
+}
+
+select {
+    flex: 1;
+}
+
+select {
+    /* border: 2px solid #dddddd; */
+    background: white;
+    padding: 10px;
+    transition: 0.4s;
+    border:none
+   
+}
+
+select:hover,
+select:focus {
+    background: white;
+}
+
+select::picker-icon {
+    color: #999999;
+    transition: 0.4s rotate;
+}
+
+select:open::picker-icon {
+    rotate: 180deg;
+}
+
+::picker(select) {
+    border: none;
+}
+
+option {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+
+    border: 2px solid white;
+    background: white;
+    padding: 10px;
+    width: 100%;
+    height: fit-content;
+    transition: 0.4s;
+}
+
+option:first-of-type {
+    border-radius: 8px 8px 0 0;
+}
+
+option:last-of-type {
+    border-radius: 0 0 8px 8px;
+}
+
+::picker(select) {
+    border-radius: 8px;
+}
+
+option:not(option:last-of-type) {
+    border-bottom: none;
+}
+
+/* option:nth-of-type(odd) {
+    background: white;
+} */
+
+option:hover,
+option:focus {
+    background: plum;
+}
+
+option .icon {
+    font-size: 1.6rem;
+    text-box: trim-both cap alphabetic;
+}
+
+selectedcontent .icon {
+    display: none;
+}
+
+option:checked {
+    font-weight: bold;
+}
+
+option::checkmark {
+    order: 1;
+    margin-left: auto;
+    content: "☑️";
+}
+
+::picker(select) {
+    opacity: 0;
+    transition: all 0.4s allow-discrete;
+}
+
+:open::picker(select) {
+    opacity: 1;
+}
+
+@starting-style {
+    :open::picker(select) {
+        opacity: 0;
+    }
+}
+
+::picker(select) {
+    top: calc(anchor(bottom) + 1px);
+    left: anchor(10%);
+}
+
+@supports not (appearance: base-select) {
+    body::before {
+        content: "Your browser does not support `appearance: base-select`.";
+        color: black;
+        background-color: wheat;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 40%;
+        text-align: center;
+        padding: 1rem 0;
+        z-index: 1;
+    }
+}
+
+.selectedcontent {
+    font-size: 22px;
+    font-weight: 500;
 }
