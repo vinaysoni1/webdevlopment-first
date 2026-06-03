@@ -173,13 +173,13 @@ nav a {
     /* border: 2px solid black; */
     height: 50vh;
     width: auto;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     margin-top: 60px;
 }
 
 .main-box {
     margin: 43px 300px;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     height: 40vh;
     /* align-items: center; */
     justify-content: center;
@@ -397,7 +397,7 @@ option::checkmark {
         justify-content: center;
         margin-top: 0px;
         height: 47px;
-        width: 70%;
+        width: 100%;
 
     }
 
@@ -420,7 +420,7 @@ option::checkmark {
     /* justify-content: center; */
     height: 196px;
     width: 80vh;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     color: white;
     margin-top: -14px;
 
@@ -438,39 +438,62 @@ option::checkmark {
 
 }
 
-.feature-content {
-    display: flex;
-    border: 2px solid black;
-    height: 150px;
+.feature-box {
+    height: 160px;
     width: 100%;
-
+    /* border: 2px solid black; */
+    margin-top: 18px;
 }
 
-.flex-container {
+.feature-box .box{
+    height: 40px;
+    width: 34%;
+    /* border: 2px solid black; */
+    margin-top: 3px;
     display: flex;
-    flex-wrap: wrap;
-    background: #00000057;
-
-    height: 100%;
-    width: 30%;
-    margin: 14px 14px 14px 14px;
-    margin-top: 2px;
-    margin-bottom: 2px;
-    border-radius: 3px;
+    align-items: center;
+    justify-content: center;
 }
-
-.flex-container div {
-    width: 100%;
-    height: 5px;
-    margin: 2px;
-    background: #00000057;
+.feature-box h1{
+    font-size: 40px;
+    font-weight: bolder;
     color: white;
-    padding: 20px;
-    overflow: hidden;
+    text-decoration: none;
+    font-family: Solis, Arial, Helvetica, sans-serif !important;
+    letter-spacing: 4.5px;
 }
-
-
-
+.feature-box h2{
+    font-size: 25px;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    font-family: Solis, Arial, Helvetica, sans-serif !important;
+    letter-spacing: -0.5px;
+    line-height: 1.33;
+    margin-left: -100px;
+}
+.feature-box img{
+    height: 60px;
+    width: 60px;
+    margin-left:-100px;
+}
+.feature-box .temperature{
+    font-size: 23px;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    font-family: Solis, Arial, Helvetica, sans-serif !important;
+    letter-spacing: .5px;
+    line-height: 1.33;
+    margin-left: 19px;
+}
+.real-feel-box{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    margin-top: 5px;
+    margin-left: 44px;
+}
 @media screen and (max-width: 760px) {
 
     .InputContainer {
@@ -483,5 +506,70 @@ option::checkmark {
 
 
     }
+
+}
+
+@media screen and (max-width: 1360px) {
+    #recent-location{
+        display:none;
+    }
+    .feature_location {
+        /* display: flex; */
+        /* align-items: center;
+        justify-content: center; */
+        margin-top: -90px;
+        height: 47px;
+    
+        /* width: 100%; */
+        background-color: rgba(0, 0, 0, .25)
+    }
+
+    .feature-box{
+        display: flex;
+        margin-top: 0px;
+        Height: fit-content;
+        width: 100%;
+        BORDER: 2px solid rgba(0, 0, 0, .25)
+        /* flex-direction: column; */
+    }
+    .feature-box h1 {
+    font-size: 22px;
+    font-weight: bolder;
+    color: white;
+    text-decoration: none;
+    font-family: Solis, Arial, Helvetica, sans-serif !important;
+    letter-spacing: 3.5px;
+    margin-right:76px;  
+}
+.feature-box h2 {
+    font-size: 22px;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    font-family: Solis, Arial, Helvetica, sans-serif !important;
+    letter-spacing: -0.5px;
+    line-height: 1.33;
+    /* margin-left: -100px; */
+    margin-right: 140px;
+}
+.real-feel-box{
+    display: none;
+}
+.feature-box .box {
+    height: 40px;
+    width: 34%;
+    
+    margin-top: 3px;
+    display: flex;
+    align-items: center;
+        margin-right: -48px;
+    
+}
+.feature-box img {
+    height: 60px;
+    width: 60px;
+    margin-left: 212px;
+}
+   
 
 }
