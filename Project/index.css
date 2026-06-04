@@ -8,7 +8,7 @@
 body {
     height: 40%;
     width: 100%;
-    background-image: url("assets/1920x450.jpg");
+    /* background-image: url("assets/1920x450.jpg"); */
     /* background-image:url("background2.jpg"); */
     background-size: cover;
     /* background-position: center; */
@@ -19,6 +19,7 @@ body {
     width: max-content;
     height: max-content;
     padding: 5px 5px 5px 20px;
+    background-image: url("assets/1920x450.jpg"); 
 
     border: 2px solid black;
 }
@@ -163,15 +164,16 @@ nav a {
 }
 
 @media screen and (max-width: 1020px) {
-    body {
+    .main-screen {
         background-image: url("background2.jpg");
-        /* height: 20px; */
+        height: 36rem;
 
         background-size: cover;
         background-position: center;
     }
 
 }
+
 
 .container {
     border: 2px solid black;
@@ -535,7 +537,7 @@ option::checkmark {
     }
     .list-style{
         display: flex;
-        margin:13px;
+        margin:2px;
         align-items: center;
         justify-content: center;
     }
@@ -572,8 +574,59 @@ option::checkmark {
     .main-screen {
     background-attachment: fixed;
     width: auto;
-    height: max-content;
+    height: 38rem;
     padding: 5px 5px 5px 20px;
     border: 2px solid black;
+    }
+}
+@media screen and (min-width: 744px) {
+    .main-screen {
+        background-attachment: fixed;
+        width: auto;
+        height: 38rem;
+        padding: 5px 8px 5px 8px;
+        border: 2px solid black;
+    }
+}
+@media screen and (min-width: 1360px) {
+
+    .main-screen {
+    background-attachment: fixed;
+    width: auto;
+    height: 42rem;
+    padding: 5px 8px 5px 8px;
+    border: 2px solid black;
+    }
+}
+
+.blank-box{
+    height: 10rem;
+    width: 100%;
+    border:  2px solid black;
+    margin-top: 45px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    box-sizing: border-box;
+}
+.box-1{
+    height: 100%;
+    width: 100%;
+    border: 2px solid yellow;
+    background-color: rgb(16, 49, 49);
+}
+.box-2{
+
+    height: 100%;
+    width: 100%;
+    border: 2px solid yellow;
+    background-color: rgb(46, 164, 164);
+}
+
+
+@media screen and (max-width: 740px) {
+    .blank-box{
+        height: 10rem;
+        width: 100%;
+        background-color: bisque;
     }
 }
