@@ -170,7 +170,7 @@ nav a {
 }
 
 .container {
-    /* border: 2px solid black; */
+    border: 2px solid black;
     height: 50vh;
     width: auto;
     /* border: 2px solid black; */
@@ -179,7 +179,7 @@ nav a {
 
 .main-box {
     margin: 43px 300px;
-    /* border: 2px solid black; */
+    border: 2px solid black;
     height: 40vh;
     /* align-items: center; */
     justify-content: center;
@@ -256,7 +256,7 @@ select {
 }
 
 select {
-    /* border: 2px solid #dddddd; */
+    border: 2px solid #dddddd;
     background: white;
     padding: 10px;
     transition: 0.4s;
@@ -428,7 +428,7 @@ option::checkmark {
 }
 
 .feature_location span {
-    font-size: 15px;
+    font-size: 12px;
     font-weight: 500;
     color: white;
     text-decoration: none;
@@ -438,62 +438,7 @@ option::checkmark {
 
 }
 
-.feature-box {
-    height: 160px;
-    width: 100%;
-    /* border: 2px solid black; */
-    margin-top: 18px;
-}
 
-.feature-box .box{
-    height: 40px;
-    width: 34%;
-    /* border: 2px solid black; */
-    margin-top: 3px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.feature-box h1{
-    font-size: 40px;
-    font-weight: bolder;
-    color: white;
-    text-decoration: none;
-    font-family: Solis, Arial, Helvetica, sans-serif !important;
-    letter-spacing: 4.5px;
-}
-.feature-box h2{
-    font-size: 25px;
-    font-weight: 500;
-    color: white;
-    text-decoration: none;
-    font-family: Solis, Arial, Helvetica, sans-serif !important;
-    letter-spacing: -0.5px;
-    line-height: 1.33;
-    margin-left: -100px;
-}
-.feature-box img{
-    height: 60px;
-    width: 60px;
-    margin-left:-100px;
-}
-.feature-box .temperature{
-    font-size: 23px;
-    font-weight: 500;
-    color: white;
-    text-decoration: none;
-    font-family: Solis, Arial, Helvetica, sans-serif !important;
-    letter-spacing: .5px;
-    line-height: 1.33;
-    margin-left: 19px;
-}
-.real-feel-box{
-    display: flex;
-    align-items: center;
-    /* justify-content: center; */
-    margin-top: 5px;
-    margin-left: 44px;
-}
 @media screen and (max-width: 760px) {
 
     .InputContainer {
@@ -509,67 +454,103 @@ option::checkmark {
 
 }
 
-@media screen and (max-width: 1360px) {
-    #recent-location{
-        display:none;
-    }
-    .feature_location {
-        /* display: flex; */
-        /* align-items: center;
-        justify-content: center; */
-        margin-top: -90px;
-        height: 47px;
-    
-        /* width: 100%; */
-        background-color: rgba(0, 0, 0, .25)
-    }
-
-    .feature-box{
-        display: flex;
-        margin-top: 0px;
-        Height: fit-content;
-        width: 100%;
-        BORDER: 2px solid rgba(0, 0, 0, .25)
-        /* flex-direction: column; */
-    }
-    .feature-box h1 {
-    font-size: 22px;
-    font-weight: bolder;
-    color: white;
-    text-decoration: none;
-    font-family: Solis, Arial, Helvetica, sans-serif !important;
-    letter-spacing: 3.5px;
-    margin-right:76px;  
+.feature_location .recent-location {
+    height: 22px;
+    width: 100%
 }
-.feature-box h2 {
+
+.feature_Location-location {
+    height: auto;
+    width: 100%;
+    /* border: 2px solid red; */
+    margin-top: 10px;
+}
+
+.list-feature {
+    height: auto;
+    width: 30%;
+    border: 2px solid rgba(0, 0, 0, .25);
+    background-color: rgba(0, 0, 0, .25);
+    /* margin: 19px; */
+    border-radius: 5px;
+    margin-top: 12px;
+    padding: 10px;
+}
+
+.list li {
+    /* border: 2px solid black; */
+    list-style-type: none;
+    height: auto;
+    width: 100%;
+    gap: 10px;
+}
+
+#Bhopal h1 {
     font-size: 22px;
     font-weight: 500;
     color: white;
     text-decoration: none;
     font-family: Solis, Arial, Helvetica, sans-serif !important;
-    letter-spacing: -0.5px;
+    letter-spacing: 1.5px;
     line-height: 1.33;
-    /* margin-left: -100px; */
-    margin-right: 140px;
 }
-.real-feel-box{
+
+#India h2 {
     display: none;
-}
-.feature-box .box {
-    height: 40px;
-    width: 34%;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 1.33;
+    overflow: hidden;
+    padding-bottom: 13px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
     
-    margin-top: 3px;
-    display: flex;
-    align-items: center;
-        margin-right: -48px;
-    
 }
-.feature-box img {
-    height: 60px;
-    width: 60px;
-    margin-left: 212px;
+
+#temperature img {
+    height: 42px;
+    width: auto;
 }
-   
+#temperature h3{
+    margin: auto;
+    font-size: 25px;
+}
+#realfeel{
+    font-size: 17px;
+}
+#degree{
+    font-size: 17px;
+    margin:auto;
+}
+
+
+@media screen and (max-width: 1360px) {
+
+    #recent-location{
+        display: none;
+    }
+    .list-style{
+        display: flex;
+        margin:auto;
+        align-items: center;
+        justify-content: center;
+    }
+    #realfeel{
+        display: none;
+    }
+     #degree{
+        display: none;
+    }
+    .list-feature {
+    height: auto;
+    width: 100%;
+    /* border: 2px solid rgba(0, 0, 0, .25); */
+    background-color: rgba(0, 0, 0, .25);
+    /* margin: 19px; */
+    border-radius: 5px;
+    margin-top: -13px;
+    padding: 0px;
+}
 
 }
