@@ -993,7 +993,7 @@ option::checkmark {
     color: black;
     font-family: Solis, Arial, Helvetica, sans-serif !important;
 
-    padding: 15px 3px 23px 19px;
+    padding: 15px 3px 3px 19px;
 }
 .more-storis{
     font-weight: 400;
@@ -1009,4 +1009,68 @@ option::checkmark {
     margin-top: 12px;
     font-size: 14px;
 }
+.fast-col{
+    height: max-content;
+    width: 104px;
+}
+.fast-col img{
+    height: 58px;
+    width: 104px;
+        padding: 6px 11px 6px 10px;
+}
+.video{
+    display: flex;
+    height: 60px;
+}
+.bottem{
+    display: flex;
+    color: gray;
+    justify-content: space-between;
+    font-size: 9px;
+    text-decoration: none;
+    list-style: none;
+    padding: 1px 9px 3px 7px;
+}
+.para{
+    width: 111px;
+    font-size: 10px;
+    font-family: Solis, Arial, Helvetica, sans-serif !important;
+    color: black;
+    padding: 7px 0px 0px 7px
 
+}
+.play-icon{
+    height: 17px;
+    width: 17px;
+    border-radius: 60px;
+    background-color: rgb(255, 255, 255);
+    opacity: 0.9;
+    margin-top: -29px;
+    margin-left: 14px;
+}
+.mid-point img{
+   height: 18px;
+    width: 28px;
+    margin-left: -5px;
+    
+}
+.video-8{
+    display: flex;
+    height: 60px;
+    border: 2px solid black;
+    font-family:Solis, Arial, Helvetica, sans-serif !important ;
+}
+.fast-clm{
+    width: 10rem;
+    height: max-content;
+     border: 2px solid red
+}
+.head{
+    font-size: 14px;
+    color: gray;
+    padding: 1px 34px 5px 4px;
+}
+.sec-head{
+    font: size 10px;
+    color: black;
+}
