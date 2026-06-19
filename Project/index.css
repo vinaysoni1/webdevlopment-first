@@ -995,7 +995,8 @@ option::checkmark {
 
     padding: 15px 3px 3px 19px;
 }
-.more-storis{
+
+.more-storis {
     font-weight: 400;
     display: block;
     font-size: 14px;
@@ -1003,26 +1004,31 @@ option::checkmark {
     font-style: normal;
     margin-top: 0px;
 }
-.viral-weather{
-        font-weight: 600;
+
+.viral-weather {
+    font-weight: 600;
     padding: 2px;
     margin-top: 12px;
     font-size: 14px;
 }
-.fast-col{
+
+.fast-col {
     height: max-content;
     width: 104px;
 }
-.fast-col img{
+
+.fast-col img {
     height: 58px;
     width: 104px;
-        padding: 6px 11px 6px 10px;
+    padding: 6px 11px 6px 10px;
 }
-.video{
+
+.video {
     display: flex;
     height: 60px;
 }
-.bottem{
+
+.bottem {
     display: flex;
     color: gray;
     justify-content: space-between;
@@ -1031,15 +1037,16 @@ option::checkmark {
     list-style: none;
     padding: 1px 9px 3px 7px;
 }
-.para{
+
+.para {
     width: 111px;
     font-size: 10px;
     font-family: Solis, Arial, Helvetica, sans-serif !important;
     color: black;
     padding: 7px 0px 0px 7px
-
 }
-.play-icon{
+
+.play-icon {
     height: 17px;
     width: 17px;
     border-radius: 60px;
@@ -1048,41 +1055,109 @@ option::checkmark {
     margin-top: -29px;
     margin-left: 14px;
 }
-.mid-point img{
-   height: 18px;
+
+.mid-point img {
+    height: 18px;
     width: 28px;
     margin-left: -5px;
-    
+
 }
-.video-8{
+
+.video-8 {
     display: flex;
     height: 60px;
-    
-    font-family:Solis, Arial, Helvetica, sans-serif !important ;
+
+    font-family: Solis, Arial, Helvetica, sans-serif !important;
 }
-.fast-clm{
+
+.fast-clm {
     width: 10rem;
     height: max-content;
-     
+
 }
-.head{
+
+.head {
     font-size: 14px;
     color: gray;
     padding: 1px 34px 5px 4px;
 }
-.sec-head{
-    font-size:  10px;
+
+.sec-head {
+    font-size: 10px;
     color: black;
     padding: 0px 5px 3px 6px;
 }
-.time-dur{
+
+.time-dur {
     font-size: 8px;
     color: gray;
-     padding: 0px 5px 3px 6px;
+    padding: 0px 5px 3px 6px;
 }
-.second-clm img{
+
+.second-clm img {
     height: 43px;
     width: 43px;
     margin: 3px;
     border-radius: 5px;
+}
+
+.btm-box {
+    border: 2px solid black;
+    height: max-content;
+    width: 100%;
+    margin-top: 100px;
+}
+
+.headar-line {
+    margin: -30px;
+    align-items: center;
+    display: flex;
+}
+
+
+.headar-line p {
+    /* border: 2px solid rgb(182, 52, 52); */
+    font-size: 22px;
+    font-style: normal;
+    font-weight: bold;
+    font-family: Solis, Arial, Helvetica, sans-serif !important;
+    padding: 15px 23px 21px 1px;
+}
+.cart-1{
+    display:  flex;
+    width: 100%;
+    padding: 0px 10px 17px 10px;
+    gap: 10px;
+    margin-top: -55px;
+}
+.fast-cart{
+    height: max-content;
+    width: 33%;
+   background-color: #8f8f8f26;
+   border-radius: 7px;
+    display: grid;
+    font-size: 9px;
+}
+.img{
+        display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+    
+}
+.btm-content{
+    margin-top: 15px;
+    height: 3rem;
+    width: 14rem;
+    /* padding: 13px 27px; */
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.29;
+        padding: 5px 24px 82px 14px;
+       font-family: Solis, Arial, Helvetica, sans-serif !important;
+}
+.time{
+    font-size: 10px;
+    color: gray;
+    margin-top: 12px;
 }
