@@ -1,0 +1,11 @@
+div.footer{
+    text-align: center;
+    background-color: black;
+    color: rgb(255, 255, 255);
+    width: 100%;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: small;
+    bottom: 0;
+    position: fixed;
+}

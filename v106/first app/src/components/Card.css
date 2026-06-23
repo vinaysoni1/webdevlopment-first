@@ -1,0 +1,12 @@
+.card{
+  border: 2px solid aqua;
+  width: 200px;
+  height: 200px;
+  margin: 25px;
+  justify-content: center;
+  display: grid;
+  /* align-items: center; */
+  /* background-color: aqua; */
+  box-shadow: 0px 0px 12px 2px black;
+  margin-top: 122px;
+}
