@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: plum;
 }
 
 code {
@@ -13,20 +14,21 @@ code {
 }
 
 button {
-  color: #000000;
-  background-color:black;
+  color:black;
+  opacity: .6;
+  background-color:rgb(0, 0, 0);
   height: 25px;
-  width: 5rem;
+  width:25px;;
   border-radius: 29px;
   font-size: 12px;
   font-weight: bolder;
   border: none;
   color: aliceblue;
-  box-shadow: 0px 0px 4px 4px #ff00004a;
+  /* box-shadow: 0px 0px 4px 4px #ff00004a; */
 }
 
 .box {
-  /* border: 2px solid red; */
+  border: 2px solid red;
   height: 2rem;
  padding: 24px 62px 38px 113px;
   display: flex;
@@ -35,19 +37,19 @@ button {
   gap:5px;
 }
 .count{
-  background-color: #e81010a6;
-  margin: 10px;
-  width: 4rem;
-  height:4rem ;
-  border-radius: 60px;
+  /* background-color: #e81010a6; */
+  /* margin: 10px; */
+  /* width: 4rem;
+  height:4rem ; */
+  /* border-radius: 60px; */
   display: flex;
   align-items: center;
   justify-content: center;
   justify-self: center;
-  font-size: 27px;
-  color: black;
+  font-size: 40px;
+  color: rgb(255, 255, 255);
   font-weight: bolder;
-  box-shadow: 0px 0px 22px 8px black;
+  
 
 }
 .heading{
@@ -55,7 +57,7 @@ button {
     font-weight: bold;
     color: gray;
     margin-top: 17px;
-    margin-bottom: 42px;
+    /* margin-bottom: 42px; */
     display: flex;
     align-items: center;
     justify-content: center;

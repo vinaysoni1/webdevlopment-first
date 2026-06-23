@@ -14,9 +14,11 @@ function App() {
       <Footer className="heading"/>
       <div className="count">{value}</div>
       <div className="box">
-      <button onClick={()=>{setvalue(value+1)}}>Increase(+)</button>
-      <button onClick={()=>{setvalue(value-1)}}>Decrease(-)</button>
-      <button onClick={()=>{setvalue(0)}}>Reset</button>
+      <button onClick={()=>{setvalue(value+1)}}>+</button>
+      <button onClick={()=>{setvalue(value-1)}}>-</button>
+      <button onClick={()=>{setvalue(0)}}> <img src="refresh_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="" /> 
+
+      </button>
       
       </div>
     </div>
