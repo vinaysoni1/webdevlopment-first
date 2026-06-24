@@ -65,33 +65,32 @@
 
 // perfomance hooks 
 
-import { useMemo, useState} from 'react'
+// import { useMemo, useState} from 'react'
 
 
-function App() {
-  const [count, setcount] = useState(0);
-  const [text, settext] = useState("");
-  const ExpensiveCalculation = useMemo (()=>{
-    console.log("hey");
-    return count*2;
-  }, [count])
+// function App() {
+//   const [count, setcount] = useState(0);
+//   const [text, settext] = useState("");
+//   const ExpensiveCalculation = useMemo (()=>{
+//     console.log("hey");
+//     return count*2;
+//   }, [count])
   
 
 
-  return (
-    <>
-    <h1>Count: {count}</h1>
-    <h2>ExpensiveCalculation: {ExpensiveCalculation}</h2>
-    <button onClick={()=> setcount(count+1)}>Increment Count</button>
-    <input
-                type="text"
-                value={text}
-                onChange={(e) => setText(e.target.value)}
-                placeholder="Type something"
-            />
+//   return (
+//     <>
+//     <h1>Count: {count}</h1>
+//     <h2>ExpensiveCalculation: {ExpensiveCalculation}</h2>
+//     <button onClick={()=> setcount(count+1)}>Increment Count</button>
+//     <input
+//                 type="text"
+//                 value={text}
+//                 onChange={(e) => setText(e.target.value)}
+//                 placeholder="Type something"
+//             />
       
-    </>
-  )
-}
+//     </>
+//   )
+// }
 
-export default App
