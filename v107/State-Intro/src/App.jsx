@@ -71,8 +71,9 @@
 // function App() {
 //   const [count, setcount] = useState(0);
 //   const [text, settext] = useState("");
+//    const [Message, setMessage] = useState("")
 //   const ExpensiveCalculation = useMemo (()=>{
-//     console.log("hey");
+//       console.log("hiii")
 //     return count*2;
 //   }, [count])
   
@@ -93,4 +94,32 @@
 //     </>
 //   )
 // }
+// export default App
 
+
+
+import { useState} from 'react'
+
+
+function App() {
+  const [color, setcolor] = useState("red");
+ 
+  
+
+
+  return (
+    <>
+    <h1>My Faverate color is {color}</h1>
+    <button type="button" onClick={()=> setcolor("bluue")}>blue</button>
+    <button  type="button"  onClick={()=> setcolor("gray")}>gray</button>
+    <button  type="button" onClick={()=> setcolor("green")}>green</button>
+    <button  type="button" onClick={()=> setcolor("aqua")}>aqua</button>
+    <button  type="button" onClick={()=> setcolor("pink")}>pink</button>
+    <button  type="button" onClick={()=> setcolor("black")}>black</button>
+    <button  type="button" onClick={()=> setcolor("yellow")}>yellow</button>
+    
+    </>
+   
+  );
+}
+export default App
