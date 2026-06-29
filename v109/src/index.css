@@ -108,4 +108,55 @@ code {
   line-height: 135%;
   padding: 4px 8px;
   background: var(--code-bg);
+}
+
+
+button{
+  gap: 23px;
 } */
+
+/* *{
+  margin-top:  5rem;
+  margin-left:  5rem;
+} */
+.images{
+ 
+  height: max-content;
+  width: 18%;
+  padding: 2px;
+  overflow-x:scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: none;
+  padding-right: 2rem;
+  overflow-inline:hidden;
+  /* display: none; */
+
+}
+
+.images ul{
+  display: flex;
+  list-style: none;
+}
+.images ul li {
+  gap: 12px;
+  margin: 2px;
+
+}
+.images ul li img{
+  height: 200px;
+  width: 200px;
+
+}
+
+.main{
+  background-color: rgb(171, 206, 194);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn{
+  display: grid;
+      gap: 1rem;
+    margin: 43px;
+}
