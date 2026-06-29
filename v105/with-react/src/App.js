@@ -16,9 +16,7 @@ function App() {
       <div className="box">
       <button onClick={()=>{setvalue(value+1)}}>+</button>
       <button onClick={()=>{setvalue(value-1)}}>-</button>
-      <button onClick={()=>{setvalue(0)}}> <img src="refresh_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="" /> 
-
-      </button>
+      <button onClick={()=>{setvalue(0)}}></button>
       
       </div>
     </div>
