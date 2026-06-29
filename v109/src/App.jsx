@@ -1,19 +1,38 @@
-import {useEffect, useRef} from 'react'
+import {useRef, useState } from 'react'
 
-const App = () => {
-  // const ref =useRef(0);
-  const ref= useRef(0)
+export default function App() {
+  const [StartTime, setStartTime] = useState(null)
+  const [now, setnow] = useState(null)
+  const intervalref = useRef(null)
 
-  useEffect(()=>{
-    ref.current = ref.current+1;
-   
-  })
+  function handlestart() {
+    setStartTime(Date.now())
+    setnow(Date.now())
+    clearInterval(intervalref.current)
+
+    intervalref.current = setInterval (()=>{
+      setnow(Date.now())
+    },10)
+  }
+
+
+  function handlestop() {
+    clearInterval(intervalref.current)
+  }
+
+  let secondpassed=0;
+if(StartTime !=null && setnow !=null) {
+  secondpassed = (now-StartTime)/1000;
+}
+
+
   return (
     <>
-    <button onClick={()=> alert('You Clicked ${ref.current} time !!')}> Click me !</button>
+      <h1>Time passed: {secondpassed.toFixed(3)} </h1>
+      <button onClick={handlestart}>Start</button>
+      <button onClick={handlestop}>Stop</button>
 
     </>
   )
 }
 
-export default App
