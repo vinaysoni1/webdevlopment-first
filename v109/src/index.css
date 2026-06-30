@@ -196,3 +196,8 @@ button{
 *{
   background-color: burlywood;
 }
+
+.btnn{
+  width: max-content;
+  justify-self: center;
+}

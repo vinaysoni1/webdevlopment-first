@@ -1,33 +1,29 @@
-// playing and peuse a video
 
-import React, { useRef, useState } from 'react'
+// 1. Accessing the DOM using useRef hook
+// A ref created with useRef is attached to the textarea, allowing the click handler to access the DOM element and programmatically set focus.
+
+import React, { Fragment, useRef } from 'react'
 
 const App = () => {
-  const[Playing , setPlaying]=useState(false)
-  const ref= useRef(null)
-  
-  function handleclick(){
-    const nextPlaying =!Playing;
-    setPlaying(nextPlaying)
 
-    if(nextPlaying){
-      ref.current.play();
-    }
-      else{
-        ref.current.pause()
-    }
+  const focous =  useRef(null)
+   
+  const oncliclHanlde =() =>{
+
+    // alert("hey")
+    focous.current.value = "My self Vinay soni & I am currently study for Web-Development";
+    focous.current.Focus();
 
   }
+  
+  
   return (
-   <main className='container'>
-   <button className='Play' onClick={handleclick}> {Playing ? 'Pause' : 'Play'} </button>
-   <video className='vdo' width={250} ref={ref} onPlay={()=>setPlaying(true)} onPause={()=>setPlaying(false)}>
-    <source
-          src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
-          type="video/mp4"
-        />
-   </video>
-   </main>
+    <Fragment>
+    <button className='btnn' onClick={oncliclHanlde}>Click</button>
+    <label>Your Introduction</label>
+    <textarea ref={focous} />
+    
+    </Fragment>
   )
 }
 
