@@ -11,7 +11,7 @@ const App = () => {
   const oncliclHanlde =() =>{
 
     // alert("hey")
-    focous.current.value = "My self Vinay soni & I am currently study for Web-Development";
+    focous.current.value = "Hello, my name is Vinay Soni. I am currently learning Web Development and improving my skills in HTML, CSS, JavaScript, and React. I have worked on small projects and website clones to practice frontend development. I am interested in building user-friendly web applications and continuously learning new technologies. Along with technical skills, I am also working on improving my communication and problem-solving abilities. I am looking for opportunities to gain experience and grow in the IT industry. Thank you.";
     focous.current.Focus();
 
   }
@@ -20,8 +20,8 @@ const App = () => {
   return (
     <Fragment>
     <button className='btnn' onClick={oncliclHanlde}>Click</button>
-    <label>Your Introduction</label>
-    <textarea ref={focous} />
+    <label>Self Introduction</label>
+    <textarea  className=" box" ref={focous} />
     
     </Fragment>
   )
