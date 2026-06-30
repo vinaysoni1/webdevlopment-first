@@ -1,48 +1,33 @@
-import React, { useRef } from 'react'
+// playing and peuse a video
+
+import React, { useRef, useState } from 'react'
+
 const App = () => {
-  const Listref = useRef(null)
+  const[Playing , setPlaying]=useState(false)
+  const ref= useRef(null)
+  
+  function handleclick(){
+    const nextPlaying =!Playing;
+    setPlaying(nextPlaying)
 
-  function  scrollToIndex(index){
-    const listnode= Listref.current;
+    if(nextPlaying){
+      ref.current.play();
+    }
+      else{
+        ref.current.pause()
+    }
 
-    const imgNode= listnode.querySelectorAll('li > img')[index];
-    imgNode.scrollIntoView({
-       behavior: 'smooth',
-      block: 'nearest',
-      inline: 'center'
-    })
   }
   return (
-    <main className='main'>
-    <nav className='btn'>
-      <button onClick={() => scrollToIndex(0)}>Left_side_Images</button>
-      <button onClick={() => scrollToIndex(1)}>Middle_Images</button>
-      <button onClick={() => scrollToIndex(2)}>Right_side_images</button>
-    </nav>
-    <div className='images'>
-      <ul ref={Listref}>
-        <li>
-           <img
-              src="https://placecats.com/neo/300/200"
-              alt="Neo"
-            />
-        </li>
-        <li>
-           <img
-              src="https://placecats.com/millie/200/200"
-              alt="Millie"
-            />
-        </li>
-        <li>
-
-          <img
-              src="https://placecats.com/bella/199/200"
-              alt="Bella"
-            />
-        </li>
-      </ul>
-    </div>
-    </main>
+   <main className='container'>
+   <button className='Play' onClick={handleclick}> {Playing ? 'Pause' : 'Play'} </button>
+   <video className='vdo' width={250} ref={ref} onPlay={()=>setPlaying(true)} onPause={()=>setPlaying(false)}>
+    <source
+          src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+          type="video/mp4"
+        />
+   </video>
+   </main>
   )
 }
 
