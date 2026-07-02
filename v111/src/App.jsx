@@ -1,39 +1,32 @@
-import {useEffect,useState} from 'react'
+import {useState,useEffect} from 'react'
 
 const App = () => {
+  const [card, setcard] = useState([])
 
-  const [item, setitem] = useState([])
-  const [DataIsLoaded, setDataIsLoaded] = useState(false)
+
+  const fetchdata = async () => {
+    let a = await fetch('https://jsonplaceholder.typicode.com/posts')
+    let b = await a.json()
+    setcard(b)
+    console.log(b)
+  }
 
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/posts")
-      .then((res) => res.json())
-      .then((json) => {
-        setitem(json)
-        setDataIsLoaded(false)
-      })
+    fetchdata()
   }, [])
   return (
-    <na>
-      <div className="container">
-        {item.map((item)=>(
- 
-
- <div className="item" key={item.id}>
-                        <ol>
-                            <div>
-                                <strong>UserId: </strong>
-                                {item.userId},
-                            </div>
-                            <div>Id: {item.id}</div>
-                            <div>Tittle: {item.title}</div>
-                            <div>Body: {item.body}</div>
-                        </ol>
-                    </div>
-        ))}
-
-      </div>
-    </na>
+    <div className="conatiner">
+      {card.map((card)=>{
+        return(
+          <div key={card.userId} className="card">
+            <h2>UserId: {card.userId}</h2>
+            <p>Id: {card.id}</p>
+            <p>Title: {card.title}</p>
+            <span>Body: {card.body}</span>
+          </div>
+        )
+      })}
+    </div>
   )
 }
 
