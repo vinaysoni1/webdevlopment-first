@@ -6,7 +6,8 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
-  const [name, setName] = useState('Vinay Soni')
+  // const [name, setName] = useState('Vinay Soni')
+  const [form, setform] = useState({email: '', phone: ''})
 
   const hadleclick = () => {
     alert('Me click hua bhai')
@@ -16,7 +17,9 @@ function App() {
   }
 
   const chnagename = (event) => {
-    setName(event.target.value)
+    // setName(event.target.value)
+    setform({...form, [event.target.name]: event.target.value})
+    console.log(form)
   }
   return (
     <>
@@ -24,11 +27,12 @@ function App() {
         <button onClick={hadleclick}>Click me </button>
       </div>
 
-      <div className="red" onMouseOver={hadlemouseover}>
+      {/* <div className="red" onMouseOver={hadlemouseover}>
         I am a redd div
-      </div>
+      </div> */}
 
-      <input type="text" placeholder="Enter your name" value={name} onChange={chnagename} />
+      <input type="text" name='email'  value={form.email} onChange={chnagename} />
+      <input type="text" name='phone' value={form.phone} onChange={chnagename} />
     </>
   )
 }
