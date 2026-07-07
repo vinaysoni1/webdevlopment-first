@@ -117,3 +117,10 @@ code {
   height: 20rem;
   width: 20rem;
 }
+
+.img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
