@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Navbar from './Components/Navbar'
+import { v4 as uuidv4 } from 'uuid';
 
 
 function App() {
@@ -7,11 +8,14 @@ function App() {
   const [tudos, setTudos] = useState([])
 
   const handleAdd = () => {
-    setTudos([...tudos, {tudo, isCompleted: false}])
+    setTudos([...tudos, { id: uuidv4(), tudo, isCompleted: false }])
     setTudo("")
     console.log(tudos)
   }
 
+  const handlecheckbox = (e) =>{
+  let id=  e.target.name
+  }
 
    const handleChange = (e) => {
     setTudo(e.target.value)
@@ -44,8 +48,9 @@ function App() {
          {tudos.map(item=>{
          
           return<div key={tudo} className="Tudo flex w-full justify-between">
+            <input name={tudo.id} onChange={handlecheckbox} type='checkbox' value={tudo.isCompleted}  id='' />
 
-            <div className={item.isCompleted? "" : 'line-through'}>{item.tudo}</div>
+            <div className={item.isCompleted? "line-through" : ""}>{item.tudo}</div>
               <div className="btn">
                 <button onClick={HandleEdit}  className='bg-blue-500 text-white font-semibold px-6 py-2  hover:bg-blue-900 m-8 rounded-md'>Edit</button>
                 <button onClick={handleDelete}  className='bg-blue-500 text-white font-semibold px-6 py-2  hover:bg-blue-900 m-8 rounded-md'>Delete</button>
