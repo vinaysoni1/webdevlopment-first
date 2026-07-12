@@ -14,7 +14,16 @@ function App() {
   }
 
   const handlecheckbox = (e) =>{
-  let id=  e.target.name
+  let id=  e.target.name;
+  // console.log(`the id is ${id}`)
+   let index =tudos.findIndex(item=>{
+    return item.id===id;
+   })
+   console.log(index)
+   let Newtudos = [...tudos];
+   Newtudos[index].isCompleted = !Newtudos[index].isCompleted;
+  //  setTudo(Newtudos)
+   console.log(Newtudos,tudos)
   }
 
    const handleChange = (e) => {
@@ -47,8 +56,8 @@ function App() {
         <div className="Tudos">
          {tudos.map(item=>{
          
-          return<div key={tudo} className="Tudo flex w-full justify-between">
-            <input name={tudo.id} onChange={handlecheckbox} type='checkbox' value={tudo.isCompleted}  id='' />
+          return<div key={item.id} className="Tudo flex w-full justify-between">
+            <input name={item.id} onChange={handlecheckbox} type='checkbox' value={item.isCompleted}  id='' />
 
             <div className={item.isCompleted? "line-through" : ""}>{item.tudo}</div>
               <div className="btn">
