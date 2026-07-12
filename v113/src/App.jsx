@@ -10,20 +10,19 @@ function App() {
   const handleAdd = () => {
     setTudos([...tudos, { id: uuidv4(), tudo, isCompleted: false }])
     setTudo("")
-    console.log(tudos)
+    
   }
 
   const handlecheckbox = (e) =>{
   let id=  e.target.name;
-  // console.log(`the id is ${id}`)
+  
    let index =tudos.findIndex(item=>{
     return item.id===id;
    })
-   console.log(index)
+   
    let Newtudos = [...tudos];
    Newtudos[index].isCompleted = !Newtudos[index].isCompleted;
-  //  setTudo(Newtudos)
-   console.log(Newtudos,tudos)
+  
   }
 
    const handleChange = (e) => {
@@ -35,8 +34,13 @@ function App() {
   }
 
   
-  const handleDelete = () => {
-   alert("delete")
+  const handleDelete = (e,id) => {
+    
+   let Newtudos =  tudos.filter((item=>{
+    return item.id!==id
+   }))
+  
+  setTudos(Newtudos)
   }
 
   
@@ -62,7 +66,7 @@ function App() {
             <div className={item.isCompleted? "line-through" : ""}>{item.tudo}</div>
               <div className="btn">
                 <button onClick={HandleEdit}  className='bg-blue-500 text-white font-semibold px-6 py-2  hover:bg-blue-900 m-8 rounded-md'>Edit</button>
-                <button onClick={handleDelete}  className='bg-blue-500 text-white font-semibold px-6 py-2  hover:bg-blue-900 m-8 rounded-md'>Delete</button>
+                <button onClick={(e)=>{handleDelete(e,item.id)}}  className='bg-blue-500 text-white font-semibold px-6 py-2  hover:bg-blue-900 m-8 rounded-md'>Delete</button>
               </div>
             </div>
             })}
