@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Navbar from './Components/Navbar'
 import { v4 as uuidv4 } from 'uuid';
 
@@ -7,9 +7,26 @@ function App() {
   const [tudo, setTudo] = useState("")
   const [tudos, setTudos] = useState([])
 
+  useEffect (()=>{
+    let tudoString = localStorage.getItem("tudos")
+    if(tudoString){
+    let tudos = JSON.parse(localStorage.getItem("tudos"))
+    setTudos(tudos)
+    }
+   
+  },[])
+
+
+  const saveToLs = (param) =>{
+    localStorage.setItem("todos", JSON.stringify(tudos))
+
+  }
+
   const handleAdd = () => {
     setTudos([...tudos, { id: uuidv4(), tudo, isCompleted: false }])
     setTudo("")
+
+    saveToLs()
     
   }
 
@@ -22,6 +39,8 @@ function App() {
    
    let Newtudos = [...tudos];
    Newtudos[index].isCompleted = !Newtudos[index].isCompleted;
+
+   saveToLs()
   
   }
 
@@ -38,6 +57,8 @@ function App() {
    }))
   
   setTudos(Newtudos)
+
+  saveToLs()
   }
 
   
@@ -45,9 +66,12 @@ function App() {
 
    let Newtudos =  tudos.filter((item=>{
     return item.id!==id
+    
    }))
   
   setTudos(Newtudos)
+
+  saveToLs()
   }
 
   
@@ -76,7 +100,7 @@ function App() {
 
             <div className={item.isCompleted? "line-through" : ""}>{item.tudo}</div>
             </div>
-              <div className="btn">
+              <div className="btn flex h-full">
                 <button onClick={(e)=>HandleEdit(e,item.id)}  className='bg-blue-500 text-white font-semibold px-6 py-2  hover:bg-blue-900 m-8 rounded-md'>Edit</button>
                 <button onClick={(e)=>{handleDelete(e,item.id)}}  className='bg-blue-500 text-white font-semibold px-6 py-2  hover:bg-blue-900 m-8 rounded-md'>Delete</button>
               </div>
