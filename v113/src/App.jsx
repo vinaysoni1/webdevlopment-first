@@ -6,6 +6,7 @@ import {  v4 as uuidv4 } from 'uuid';
 function App() {
   const [tudo, setTudo] = useState("")
   const [tudos, setTudos] = useState([])
+  const [ShowFinished, setShowFinished] = useState(true)
 
 
 
@@ -18,6 +19,11 @@ function App() {
     }
    
   },[])
+
+  const togglefinished = (e) =>{
+    setShowFinished(!ShowFinished)
+
+  }
 
 
   const saveToLS = () =>{
@@ -78,13 +84,14 @@ function App() {
   return (
     <>
     <Navbar/>
-      <div className="container mx-auto my-5  p-5 rounded-xl  bg-violet-100 min-h-[70vh] ">
+      <div className="container mx-auto my-5  p-5 rounded-xl  bg-violet-100 min-h-[70vh]  w-1/2">
 
         <div className="addtudo">
           <h2 className='text-lg font-bold'>Add A Tudos</h2>
           <input onChange={handleChange} value={tudo} type="text" className='border bg-white border-gray-300 rounded-md p-2'/>
-          <button onClick={handleAdd} className='bg-blue-500 text-white font-semibold px-6 py-2  hover:bg-blue-900 m-8 rounded-md' >Save</button>
+          <button onClick={handleAdd} disabled={tudo.length < 3} className='bg-blue-500 disabled:bg-violet-700 text-white font-semibold px-6 py-2  hover:bg-blue-900 m-8 rounded-md' >Save</button>
         </div>
+        <input onChange={togglefinished} type='checkbox' checked={ShowFinished} /> Show Finished
 
         <h2 className='text-lg font-bold'>Your Tudos</h2>
 
@@ -93,10 +100,10 @@ function App() {
           {tudos.length===0 && <div className=' text-lg font-semibold'>No Tudos Found</div>}
          {tudos.map(item=>{  
 
-          return<div key={item.id} className="Tudo flex w-full justify-between">
+          return (ShowFinished || ! item.isCompleted) &&<div key={item.id} className="Tudo flex w-full justify-between">
 
             <div className="flex items-center gap-2  mt-0">
-            <input name={item.id} onChange={handlecheckbox} type='checkbox' value={item.isCompleted}  id='' />
+            <input name={item.id} onChange={handlecheckbox} type='checkbox' checked={item.isCompleted}  id='' />
 
             <div className={item.isCompleted? "line-through" : ""}>{item.tudo}</div>
             </div>
