@@ -1,33 +1,35 @@
 import { useEffect, useState } from 'react'
 import Navbar from './Components/Navbar'
-import { v4 as uuidv4 } from 'uuid';
+import {  v4 as uuidv4 } from 'uuid';
 
 
 function App() {
   const [tudo, setTudo] = useState("")
   const [tudos, setTudos] = useState([])
 
-  useEffect (()=>{
-    let tudoString = localStorage.getItem("tudos")
+
+
+  useEffect(()=>{
+    let tudoString = localStorage.getItem("tudos");
     if(tudoString){
-    let tudos = JSON.parse(localStorage.getItem("tudos"))
+
+       let tudos = JSON.parse(localStorage.getItem("tudos"))
     setTudos(tudos)
     }
    
   },[])
 
 
-  const saveToLs = (param) =>{
-    localStorage.setItem("todos", JSON.stringify(tudos))
+  const saveToLS = () =>{
+    localStorage.setItem("tudos", JSON.stringify(tudos))
 
   }
 
   const handleAdd = () => {
     setTudos([...tudos, { id: uuidv4(), tudo, isCompleted: false }])
     setTudo("")
+     saveToLS()
 
-    saveToLs()
-    
   }
 
   const handlecheckbox = (e) =>{
@@ -39,8 +41,7 @@ function App() {
    
    let Newtudos = [...tudos];
    Newtudos[index].isCompleted = !Newtudos[index].isCompleted;
-
-   saveToLs()
+    saveToLS()
   
   }
 
@@ -51,27 +52,26 @@ function App() {
   const HandleEdit = (e,id) => {
     let t = tudos.filter(i=>i.id===id)
     setTudo(t[0].tudo)
-
     let Newtudos =  tudos.filter((item=>{
     return item.id!==id
    }))
   
   setTudos(Newtudos)
+  saveToLS()
 
-  saveToLs()
+ 
   }
 
   
   const handleDelete = (e,id) => {
-
    let Newtudos =  tudos.filter((item=>{
     return item.id!==id
-    
    }))
   
   setTudos(Newtudos)
+   saveToLS()
 
-  saveToLs()
+  
   }
 
   
@@ -88,11 +88,11 @@ function App() {
 
         <h2 className='text-lg font-bold'>Your Tudos</h2>
 
-        <div className="Tudos ">
+        <div className="Tudos">
 
           {tudos.length===0 && <div className=' text-lg font-semibold'>No Tudos Found</div>}
-         {tudos.map(item=>{
-         
+         {tudos.map(item=>{  
+
           return<div key={item.id} className="Tudo flex w-full justify-between">
 
             <div className="flex items-center gap-2  mt-0">
@@ -110,9 +110,7 @@ function App() {
           </div>
           
         </div>
-        
-      
-           
+       
     </>
   )
 }
