@@ -90,7 +90,7 @@ function App() {
   return (
     <>
     <Navbar/>
-      <div className="container mx-auto my-5  p-5 rounded-xl  bg-violet-100 min-h-[70vh]  w-1/2">
+      <div className="md:container mx-3 md:mx-auto my-5  p-5 rounded-xl  bg-violet-100 min-h-[70vh] md:w-1/2">
 
         <div className="addtudo">
           <h2 className='text-lg font-bold'>Add A Tudos</h2>
@@ -106,7 +106,7 @@ function App() {
           {tudos.length===0 && <div className=' text-lg font-semibold'>No Tudos Found</div>}
          {tudos.map(item=>{  
 
-          return (ShowFinished || ! item.isCompleted) &&<div key={item.id} className="Tudo flex w-full justify-between">
+          return (ShowFinished || ! item.isCompleted) &&<div key={item.id} className="Tudo flex md:w-full justify-between">
 
             <div className="flex items-center gap-2  mt-0">
             <input name={item.id} onChange={handlecheckbox} type='checkbox' checked={item.isCompleted}  id='' />
