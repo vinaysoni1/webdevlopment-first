@@ -1,6 +1,12 @@
 import { useEffect, useState } from 'react'
 import Navbar from './Components/Navbar'
 import {  v4 as uuidv4 } from 'uuid';
+import { FaEdit } from "react-icons/fa";
+import { MdDelete } from "react-icons/md";
+import { MdOutlineSaveAlt } from "react-icons/md";
+
+
+
 
 
 function App() {
@@ -89,7 +95,7 @@ function App() {
         <div className="addtudo">
           <h2 className='text-lg font-bold'>Add A Tudos</h2>
           <input onChange={handleChange} value={tudo} type="text" className='border bg-white border-gray-300 rounded-md p-2'/>
-          <button onClick={handleAdd} disabled={tudo.length < 3} className='bg-blue-500 disabled:bg-violet-700 text-white font-semibold px-6 py-2  hover:bg-blue-900 m-8 rounded-md' >Save</button>
+          <button onClick={handleAdd} disabled={tudo.length < 3} className='bg-blue-500 disabled:bg-violet-700 text-white font-semibold px-6 py-2  hover:bg-blue-900 m-8 rounded-md' ><MdOutlineSaveAlt /></button>
         </div>
         <input onChange={togglefinished} type='checkbox' checked={ShowFinished} /> Show Finished
 
@@ -108,8 +114,8 @@ function App() {
             <div className={item.isCompleted? "line-through" : ""}>{item.tudo}</div>
             </div>
               <div className="btn flex h-full">
-                <button onClick={(e)=>HandleEdit(e,item.id)}  className='bg-blue-500 text-white font-semibold px-6 py-2  hover:bg-blue-900 m-8 rounded-md'>Edit</button>
-                <button onClick={(e)=>{handleDelete(e,item.id)}}  className='bg-blue-500 text-white font-semibold px-6 py-2  hover:bg-blue-900 m-8 rounded-md'>Delete</button>
+                <button onClick={(e)=>HandleEdit(e,item.id)}  className='bg-blue-500 text-white font-semibold px-6 py-2  hover:bg-blue-900 m-2 rounded-md'><FaEdit /></button>
+                <button onClick={(e)=>{handleDelete(e,item.id)}}  className='bg-blue-500 text-white font-semibold px-6 py-2  hover:bg-blue-900 m-2 rounded-md'><MdDelete /></button>
               </div>
             </div>
             })}
