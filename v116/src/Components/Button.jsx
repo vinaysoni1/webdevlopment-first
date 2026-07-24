@@ -1,10 +1,13 @@
 import React from 'react'
 import Component1 from './Component1'
 
-const Button = () => {
+const Button = ({count}) => {
   return (
     <div>
-        <Button><span><Component1/></span>I am Button</Button>
+      <button>
+        <span><Component1 count={count}/></span>
+        I am Butten
+      </button>
     </div>
   )
 }

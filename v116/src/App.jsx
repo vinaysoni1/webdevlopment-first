@@ -5,12 +5,17 @@ import heroImg from './assets/hero.png'
 import './App.css'
 import Navbar from './Components/Navbar'
 
+
+
 function App() {
   const [count, setCount] = useState(0)
 
   return (
+    
     <>
-    <Navbar/>
+
+  <Navbar count={count} />
+    
       <section id="center">
         <div className="hero">
           <img src={heroImg} className="base" width="170" height="179" alt="" />

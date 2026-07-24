@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Component1 = () => {
+const Component1 = ({count}) => {
   return (
-    <div>Component1</div>
+    <div>{count}</div>
   )
 }
 
