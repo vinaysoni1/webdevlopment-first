@@ -1,14 +1,16 @@
-import React from 'react'
+import React ,{useContext} from 'react'
 import Component1 from './Component1'
+import { counterContext } from '../Context/context'
 
-const Button = ({count}) => {
+const Button = ({ count }) => {
+  const value = useContext(counterContext)
   return (
     <div>
-      <button>
-        <span><Component1 count={count}/></span>
+      <button  onClick={() => value.setCount((count) => count + 1)} >
+        <span><Component1/></span>
         I am Butten
       </button>
-    </div>
+    </div >
   )
 }
 
