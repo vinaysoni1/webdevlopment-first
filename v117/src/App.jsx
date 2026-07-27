@@ -6,10 +6,10 @@ import './App.css'
 
 
 
-const num = new Array(30_00_000).fill(0).map((_,i)=>{
-  return{
-    index:i,
-    isMagical: i===29_00_000
+const num = new Array(30_00_000).fill(0).map((_, i) => {
+  return {
+    index: i,
+    isMagical: i === 29_00_000
   }
 })
 function App() {
@@ -18,13 +18,13 @@ function App() {
 
 
   // const Magical = Number.find(item=>item.isMagical===true) //expencive computation
-  const magical = useMemo(()=>Number.find(item=>item.isMagical===true),[])
+  const Magical = useMemo(() => Number.find(item => item.isMagical === true), [Number])
 
   return (
     <>
-    <span>
-      Magical number is {Magical.index}
-    </span>
+      <span>
+        Magical number is {Magical.index}
+      </span>
       <section id="center">
         <div className="hero">
           <img src={heroImg} className="base" width="170" height="179" alt="" />
@@ -40,7 +40,18 @@ function App() {
         <button
           type="button"
           className="counter"
-          onClick={() => setCount((count) => count + 1)}
+          onClick={() => {
+            setCount((count) => count + 1)
+              if (count == 10) {
+              setNumber(new Array(10_00_000).fill(0).map((_, i) => {
+                return {
+                  index: i,
+                  isMagical: i === 9_00_000
+                }
+              }))
+            }
+          }}
+
         >
           Count is {count}
         </button>
