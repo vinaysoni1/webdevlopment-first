@@ -6,7 +6,7 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
-  const a = useRef(0)
+  const a = useRef(1)
 
   useEffect(() => {
  a.current = a.current + 1
