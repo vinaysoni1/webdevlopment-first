@@ -4,12 +4,14 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
 import Navbar from './Components/Navbar'
+import { CountContext } from './Context/Context'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
+    <CountContext.Provider value={{count, setCount}}>
     <Navbar />
       <section id="center">
         <div className="hero">
@@ -117,6 +119,7 @@ function App() {
 
       <div className="ticks"></div>
       <section id="spacer"></section>
+      </CountContext.Provider >
     </>
   )
 }
