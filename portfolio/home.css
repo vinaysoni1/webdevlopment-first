@@ -1,0 +1,137 @@
+.home{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 2.5rem;
+    align-items: center;
+    width: 90%;
+    max-width: 700px;
+    margin: 2rem auto;
+}
+.img-container{
+    height: 270px;
+    width: 270px;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.img-container::before, .img-container::after{
+    content: " ";
+    position: absolute;
+    inset: 0;
+    background-image: conic-gradient(
+        transparent,
+        transparent,
+        transparent,
+        var(--green)
+    );
+    animation: revolve 4s linear infinite;
+}
+.img-container::after{
+    animation-delay: 2s;
+}
+@keyframes revolve {
+    from{
+        transform: rotate(0deg);
+
+    }
+    to{
+  transform: rotate(360deg);
+    }
+}
+.img-container img{
+    /* width: calc(100%-15px);
+    height: calc(100%-15px); */
+    height: 90%;
+    width: 90%;
+    border-radius: 50%;
+    object-fit: cover;
+    z-index: 2;
+}
+
+.details{
+    display: flex;
+    flex-direction: column;  
+    gap: 20px;
+    max-width: 600px;  
+}
+.details h2{
+    font-size: 2.5rem ;
+}
+.details h3{
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    gap: 10px;
+    white-space:nowrap;
+    overflow: hidden;
+}
+.details h3 span{
+    color: var(--green);
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 130px;
+}
+#typing-span::after{
+    content: " | ";
+    margin-left: 5px;
+    animation: blink 0.7s step(1) infinite;
+}
+@keyframes blink {
+    0% ,
+     100%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+}
+
+.details p{
+    font-size: 1.5rem;
+    text-align: justify;
+}
+@media screen and (width>=768px) {
+    .home{
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: space-between;
+        gap: 3.5rem;
+        width: 100%;
+        max-width: 100%;
+
+    }
+    .details h2{
+        font-size: 3rem;
+    }
+    .details h3{
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (width>=1024px) {
+    .home{
+        margin: 3rem auto;
+    }
+    .img-container{
+        height: 400px;
+        width:400px;
+
+    }
+    .details{
+        gap: 30px;
+
+    }
+    .details h2{
+        font-size: 3rem;
+    }
+     .details h3{
+        font-size: 2rem;
+    }
+    .details p{
+        font-size: 1.5rem;
+    }
+}
