@@ -1,4 +1,4 @@
-.home{
+.home {
     display: flex;
     flex-direction: column-reverse;
     gap: 2.5rem;
@@ -7,7 +7,8 @@
     max-width: 700px;
     margin: 2rem auto;
 }
-.img-container{
+
+.img-container {
     height: 270px;
     width: 270px;
     border-radius: 50%;
@@ -17,31 +18,35 @@
     align-items: center;
     overflow: hidden;
 }
-.img-container::before, .img-container::after{
+
+.img-container::before,
+.img-container::after {
     content: " ";
     position: absolute;
     inset: 0;
-    background-image: conic-gradient(
-        transparent,
-        transparent,
-        transparent,
-        var(--green)
-    );
+    background-image: conic-gradient(transparent,
+            transparent,
+            transparent,
+            var(--green));
     animation: revolve 4s linear infinite;
 }
-.img-container::after{
+
+.img-container::after {
     animation-delay: 2s;
 }
+
 @keyframes revolve {
-    from{
+    from {
         transform: rotate(0deg);
 
     }
-    to{
-  transform: rotate(360deg);
+
+    to {
+        transform: rotate(360deg);
     }
 }
-.img-container img{
+
+.img-container img {
     /* width: calc(100%-15px);
     height: calc(100%-15px); */
     height: 90%;
@@ -51,51 +56,68 @@
     z-index: 2;
 }
 
-.details{
+.details {
     display: flex;
-    flex-direction: column;  
+    flex-direction: column;
     gap: 20px;
-    max-width: 600px;  
+    max-width: 600px;
 }
-.details h2{
-    font-size: 2.5rem ;
+
+.details h2 {
+    font-size: 2.5rem;
 }
-.details h3{
+
+.details h2 span {
+    background: linear-gradient(to right, var(--green), var(--white));
+    padding-bottom: 2px;
+    border-bottom: 5px solid var(--green);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.details h3 {
     display: flex;
     align-items: center;
     font-size: 2rem;
     gap: 10px;
-    white-space:nowrap;
+    white-space: nowrap;
     overflow: hidden;
 }
-.details h3 span{
+
+.details h3 span {
     color: var(--green);
     display: inline-block;
     white-space: nowrap;
-    overflow: hidden;
+    /* overflow: hidden; */
     max-width: 130px;
 }
-#typing-span::after{
-    content: " | ";
+
+.details h3 span::after {
+    content: "|";
     margin-left: 5px;
     animation: blink 0.7s step(1) infinite;
 }
+
 @keyframes blink {
-    0% ,
-     100%{
+
+    0%,
+    100% {
         opacity: 1;
     }
-    50%{
+
+    50% {
         opacity: 0;
     }
 }
 
-.details p{
+.details p {
     font-size: 1.5rem;
     text-align: justify;
 }
+
 @media screen and (width>=768px) {
-    .home{
+    .home {
         display: grid;
         grid-template-columns: auto auto;
         justify-content: space-between;
@@ -104,34 +126,93 @@
         max-width: 100%;
 
     }
-    .details h2{
-        font-size: 3rem;
-    }
-    .details h3{
+
+    .details h2 {
         font-size: 2.5rem;
     }
+
+    .details h3 {
+        font-size: 2.5rem;
+    }
+    .social-icon{
+        font-size: 3rem;
+    }
+    .bottem{
+        flex-direction: row;
+        grid:20px;
+        
+    }
+   
 }
 
 @media screen and (width>=1024px) {
-    .home{
+    .home {
         margin: 3rem auto;
     }
-    .img-container{
+   
+
+    .img-container {
         height: 400px;
-        width:400px;
+        width: 400px;
 
     }
-    .details{
+
+    .details {
         gap: 30px;
 
     }
-    .details h2{
+
+    .details h2 {
         font-size: 3rem;
     }
-     .details h3{
-        font-size: 2rem;
+
+    .details h3 {
+        font-size: 2.8rem;
     }
-    .details p{
+
+    .details p {
         font-size: 1.5rem;
     }
+    .social-icon{
+        font-size: 3rem;
+    }
+    
+    
+    
+    
+}
+
+.bottem{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.bottem button{
+    width: 12rem;
+    padding: 0.8rem 0;
+    font-size: 1.3rem;
+    font-weight: 600;
+    background: var(--green);
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+    
+}
+.bottem button:hover{
+    box-shadow: 3px 3px 3px 3px var(--green), -3px 3px 3px 3px var(--green), 3px -3px 3px 3px var(--green), -3px -3px 3px 3px var(--green);
+}
+
+.social-icon{
+    display: flex;
+    font-size: 2.5rem;
+    gap: 20px;
+}
+.social-icon a{
+    color: var(--white);
+    transition: all ease 0.3s;
+}
+.social-icon a:hover{
+    color: var(--green);
+    scale:105%;
 }
