@@ -1,4 +1,4 @@
-.home {
+#home.active.content {
     display: flex;
     flex-direction: column-reverse;
     gap: 2.5rem;
@@ -117,7 +117,7 @@
 }
 
 @media screen and (width>=768px) {
-    .home {
+    #home.active.content {
         display: grid;
         grid-template-columns: auto auto;
         justify-content: space-between;
@@ -146,7 +146,7 @@
 }
 
 @media screen and (width>=1024px) {
-    .home {
+    #home.active.content {
         margin: 3rem auto;
     }
    
@@ -193,7 +193,7 @@
     font-size: 1.3rem;
     font-weight: 600;
     background: var(--green);
-    border-radius: 5px;
+    border-radius: 50px;
     cursor: pointer;
     border: none;
     transition: all 0.3s ease;
