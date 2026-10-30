@@ -1,7 +1,7 @@
 #home.active.content {
     display: flex;
     flex-direction: column-reverse;
-    gap: 2.5rem;
+    gap: 3rem;
     align-items: center;
     width: 90%;
     max-width: 700px;
@@ -134,22 +134,30 @@
     .details h3 {
         font-size: 2.5rem;
     }
-    .social-icon{
+
+    .social-icon {
         font-size: 3rem;
     }
-    .bottem{
+
+    .bottem {
+        display: flex;
         flex-direction: row;
-        grid:20px;
-        
+        grid: 20px;
+        align-items: center;
+
+
     }
-   
+    .btn{
+        border-radius: 50%;
+    }
+
 }
 
 @media screen and (width>=1024px) {
     #home.active.content {
         margin: 3rem auto;
     }
-   
+
 
     .img-container {
         height: 400px;
@@ -173,21 +181,20 @@
     .details p {
         font-size: 1.5rem;
     }
-    .social-icon{
+
+    .social-icon {
         font-size: 3rem;
     }
-    
-    
-    
-    
+
 }
 
-.bottem{
+.bottem {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    flex-direction: row;
+    gap: 30px;
 }
-.bottem button{
+
+.btn{
     width: 12rem;
     padding: 0.8rem 0;
     font-size: 1.3rem;
@@ -197,22 +204,45 @@
     cursor: pointer;
     border: none;
     transition: all 0.3s ease;
-    
-}
-.bottem button:hover{
-    box-shadow: 3px 3px 3px 3px var(--green), -3px 3px 3px 3px var(--green), 3px -3px 3px 3px var(--green), -3px -3px 3px 3px var(--green);
+
 }
 
-.social-icon{
+.btn:hover {
+    box-shadow: 3px 3px 3px 3px var(--green), -3px 3px 3px 3px var(--green), 3px -3px 3px 3px var(--green), -3px -3px 3px 3px var(--green);
+    background: transparent;
+    border: 2px solid var(--green);
+    color: var(--white);
+}
+
+.social-icon {
     display: flex;
-    font-size: 2.5rem;
+    align-items: center;
+    
     gap: 20px;
 }
-.social-icon a{
-    color: var(--white);
+
+.social-icon a {
+    /* color: var(--white); */
     transition: all ease 0.3s;
-}
-.social-icon a:hover{
+    width: 45px;
+    height: 45px;
+    text-decoration: none;
     color: var(--green);
-    scale:105%;
+    border: 2px solid var(--green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.social-icon a i{
+    font-size: 1.5rem;
+}
+
+.social-icon a:hover {
+    background-color: var(--green);
+    color: var(--white);
+    box-shadow: 2px 2px 2px 2px var(--green), -2px 2px 2px 2px var(--green), 2px -2px 2px 2px var(--green), -2px -2px 2px 2px var(--green);
+
+    
 }

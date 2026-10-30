@@ -4,31 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio-website</title>
+    <title>PortFolio-Website</title>
+    <link rel="shortcut icon" href="assets/Lion-Head-Logo-Design.jpg" type="image/x-icon">
 </head>
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="home.css">
-<link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
-<script src="https://kit.fontawesome.com/f83f41acc6.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="Style/Style.css">
+<link rel="stylesheet" href="Style/home.css">
+<link rel="stylesheet" href="Style/services.css">
+<link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" />
 
 <body>
     <div class="main-container">
         <header>
             <div class="brand-info">
-                <img src="assets/hacker.jpeg" alt="">
+                <img src="assets/hacker.jpeg" alt="Logo" title="Logo" loading="lazy">
 
                 <h2>PortFolio</h2>
             </div>
             <div class="menu-area">
                 <input type="checkbox" id="menu-toggle" hidden />
-                <label for="menu-toggle" class="menu-icon"><i class="bx bx-menu"></i>
+                <label for="menu-toggle" class="menu-icon"><i class="ph ph-list"></i>
                 </label>
                 <label for="menu-toggle" id="overlay"></label>
 
 
                 <nav>
                     <a href="#" style="--i:1" data-tab="home" class="navlink active">Home</a>
-                    <a href="#" style="--i:2" data-tab="service" class="navlink">Services</a>
+                    <a href="#" style="--i:2" data-tab="services" class="navlink">Services</a>
                     <a href="#" style="--i:3" data-tab="about" class="navlink">About</a>
                     <a href="#" style="--i:4" data-tab="project" class="navlink">Project</a>
                     <a href="#" style="--i:5" data-tab="contact" class="navlink">Contact</a>
@@ -49,14 +51,16 @@
                     Greater Jabalpur Area
                 </p>
                 <div class="bottem">
-                    <button>Download CV</button>
+
+                    <button class="btn">Download CV</button>
+
 
                     <div class="social-icon">
 
-                        <a href="#"> <i class="fa-brands fa-github"></i> </a>
-                        <a href="#"> <i class="fa-brands fa-linkedin"></i> </a>
-                        <a href="#"> <i class="fa-brands fa-square-instagram"></i> </a>
-                        <a href="#"><i class="fa-brands fa-youtube"></i> </a>
+                        <a href="#"><i class="ph ph-github-logo"></i></a>
+                        <a href="#"><i class="ph ph-linkedin-logo"></i></a>
+                        <a href="#"><i class="ph ph-instagram-logo"></i> </a>
+                        <a href="#"><i class="ph ph-youtube-logo"></i></a>
 
                     </div>
 
@@ -71,12 +75,23 @@
 
             </div>
         </section>
-        <section id="service" class="content">Services</section>
-        <section id="about" class="content" >About</section>
+
+
+        <section id="services" class="content">
+            <h2>
+                My <span>Services</span> 
+            </h2> 
+            <div class="service-list"></div>
+
+
+        </section>
+
+
+        <section id="about" class="content">About</section>
         <section id="project" class="content">Project</section>
         <section id="contact" class="content">Contact</section>
     </div>
-    <script src="Script.js" defer></script>
+    <script src="Script.js" type="module" defer></script>
 
 </body>
 
