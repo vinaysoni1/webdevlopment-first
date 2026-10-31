@@ -112,7 +112,7 @@ navlink.forEach((link) => {
             },
             {
                 id: 6,
-                icon: "",
+                icon: "ph-camera",
                 text: "Photography",
                 para: "nd-to-end delivery of freelance projects — from planning to deployment — with quality assurance and post-...",
             },
@@ -120,15 +120,29 @@ navlink.forEach((link) => {
 
             const services = document.getElementsByClassName("service-list")
 
-            // const innercontent = serviceList.map(() => {
-            //     return `
-            //    <div>Inner box</div>
-            //     `;
-            // });
-            // Array.from(services).forEach((ele) => {
-            //     ele.innerHTML = innercontent;
-            // })
+            const innercontent = serviceList.map((l) => {
+                return `
+              <div class="box" key=${l?.id}>
+
+                <div class="head-icon">
+                <i class="ph ${l?.icon}"></i>
+                <span>
+                <i class="ph ph-arrow-down-right"></i>
+                </span>
+                </div>
+                <h3>${l?.text}</h3>
+                <span class="spacer"></span>
+
+                <p>${l?.para}</p>
+              
+              </div>
+                `;
+            }).join("");
+            Array.from(services).forEach((ele) => {
+                ele.innerHTML = innercontent;
+            })
         }
+        toggle.checked=false;
 
     })
 
