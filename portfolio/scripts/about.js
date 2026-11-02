@@ -2,11 +2,11 @@ const aboutTab = document.querySelectorAll('.tab');
 const aboutContent = document.querySelectorAll('.tab-content');
 
 
-// document.addEventListener('DOMContentLoaded', () => {
-//     if (aboutTab) {
-//         aboutTab[0].click();
-//     }
-// });
+document.addEventListener('DOMContentLoaded', () => {
+    if (aboutTab) {
+        aboutTab[0].click();
+    }
+});
 
 aboutTab.forEach((tab) => {
 
@@ -48,6 +48,23 @@ aboutTab.forEach((tab) => {
                 company: "company name",
                 details: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum."
             }]
+
+            const experincecontent = experinceList.map((ele) => {
+                return `<div class="experince-box" key=${ele?.id}>
+                        <h4>${ele?.date}</h4>
+                        <h3>${ele?.position}</h3>
+                        <div class="comapany-name">
+                            <span></span>
+                            <p>${ele?.company}</p>
+                        </div>
+                        <p>${ele?.details}</p>
+                    </div>
+                `;
+            }).join("");
+
+            if(experiences){
+                experiences.innerHTML=experincecontent;
+            }
         }
     })
 })
