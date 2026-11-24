@@ -31,22 +31,29 @@ aboutTab.forEach((tab) => {
 
             const experinceList = [{
                 id: 1,
-                date: "2023 - 2024",
-                position: "frontend developer",
-                company: "company name",
-                details: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum."
+                date: "2025-Present",
+                position: "Frontend developer",
+                company: "Personal projects",
+                details: "Developing modern and responsive websites using HTML, CSS, JavaScript, and Tailwind CSS. Focused on clean UI design and user experience."
             }, {
                 id: 2,
-                date: "2023 - 2024",
-                position: "frontend developer",
-                company: "company name",
-                details: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum."
+                date: "2026-Present",
+                position: "React Developer",
+                company: "Personal projects",
+                details: "Building interactive web applications using React.js and reusable components. Focused on dynamic interfaces and efficient development."
             }, {
                 id: 3,
-                date: "2023 - 2024",
-                position: "frontend developer",
-                company: "company name",
-                details: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum."
+                date: "2026-Present",
+                position: "Java Programmer",
+                company: "Self Learning & Practice",
+                details: "Practicing Java, OOP concepts, and Data Structures & Algorithms. Improving logical thinking and problem-solving skills."
+            },
+            {
+                id: 4,
+                date: "2025-Present",
+                position: "web Designer",
+                company: "Personal Project",
+                details: "Creating attractive and user-friendly website layouts with responsive designs. Focused on visual appearance, accessibility, and usability."
             }]
 
             const experincecontent = experinceList.map((ele) => {
@@ -71,24 +78,24 @@ aboutTab.forEach((tab) => {
 
             const educationList = [{
                 id: 1,
-                date: "2020-2023",
-                degree: "Bachelor of Computer Applications (BCA)",
-                institution: "CS University, Dehradun",
-                details: "Studied core subjects like Data Structures, Web Development, and Operating Systems. Built multiple academic projects using JavaScript and the MERN stack.",
+                date: "2024-2028 (Expected)",
+                degree: "Bachelor of Technology (B.Tech)",
+                institution: "Baderia Gloabal institute of Engineering & Management, Jabalpur",
+                details: "Currently pursuing B.Tech in CSE, focusing on programming, web development, and software engineering.",
             }, {
                 id: 2,
-                date: "2020-2023",
-                degree: "Bachelor of Computer Applications (BCA)",
-                institution: "CS University, Dehradun",
-                details: "Studied core subjects like Data Structures, Web Development, and Operating Systems. Built multiple academic projects using JavaScript and the MERN stack.",
+                date: "2024",
+                degree: "High Secondary (12th)",
+                institution: "Govt. H.S.S. Pahadi Niwar Dist. katni MP (483442)",
+                details: "Successfully completed Class 12th with 80% marks.",
 
             }, {
 
                 id: 3,
-                date: "2020-2023",
-                degree: "Bachelor of Computer Applications (BCA)",
-                institution: "CS University, Dehradun",
-                details: "Studied core subjects like Data Structures, Web Development, and Operating Systems. Built multiple academic projects using JavaScript and the MERN stack.",
+                date: "2022",
+                degree: "High School (10th)",
+                institution: "Govt. H.S.S. Pahadi Niwar Dist. katni MP (483442)",
+                details: "Successfully completed Class 10th with 75% marks.",
             }];
 
             const educationContent = educationList.map((ele) => {
@@ -187,10 +194,10 @@ aboutTab.forEach((tab) => {
                 </div>
 
                 `
-            }).join( " ");
+            }).join(" ");
 
-            if(myinfo){
-                myinfo.innerHTML=infoContent;
+            if (myinfo) {
+                myinfo.innerHTML = infoContent;
             }
         }
     })

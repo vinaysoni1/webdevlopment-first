@@ -82,39 +82,39 @@ navlink.forEach((link) => {
             const serviceList = [{
                 id: 1,
                 icon: "ph-code",
-                text: "Website Development",
-                para: "I build responsive and modern websites using the latest technologies like HTML, CSS, JavaScript, React, and...",
+                text: "Frontend Development",
+                para: "I build interactive and user-friendly websites using HTML, CSS and JavaScript..."
 
             },
             {
                 id: 2,
                 icon: "ph-paint-brush",
-                text: "UX/UI Design",
-                para: "Custom mobile apps for Android and iOS using React Native and Expo, designed to provide excellent UI/UX...",
+                text: "React Development",
+                para: "I develop reusable components and dynamic user interfaces using React...",
             },
             {
                 id: 3,
                 icon: "ph-trend-up",
-                text: "SEO Optimization",
-                para: "I improve website visibility on search engines with optimized structure, keywords, and performance best...",
+                text: "Responsive Web Design",
+                para: "I create responsive websites that work across mobile, tablet and desktop devices...",
             },
             {
                 id: 4,
                 icon: "ph-palette",
-                text: "Graphic Design",
-                para: "Offering expert advice and solutions for tech projects, helping individuals and startups with project planning and...",
+                text: "PortFolio Website Development",
+                para: "I create modern portfolio websites to showcase skills, projects and professional achievements...",
             },
             {
                 id: 5,
                 icon: "ph-video",
-                text: "Mentorship & Training",
-                para: "Personal mentorship for beginners to advanced learners in web development, including live coding sessions and...",
+                text: "Java Programming",
+                para: "I write Java programs and practice object-oriented programming and problem-solving...",
             },
             {
                 id: 6,
                 icon: "ph-camera",
-                text: "Photography",
-                para: "nd-to-end delivery of freelance projects — from planning to deployment — with quality assurance and post-...",
+                text: "Database Management",
+                para: "I work with MongoDB to understand database structures and manage application data...",
             },
             ];
 
