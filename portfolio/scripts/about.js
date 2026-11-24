@@ -145,15 +145,52 @@ aboutTab.forEach((tab) => {
             }];
 
             const skillContent = skillsList.map((ele) => {
-                return`
+                return `
                   <div class="skill-box" key=${ele?.id} >
                             <img src=${ele?.icons} alt=${ele?.name} title=${ele?.name} loading="lazy" />
                         </div>
                 `
             }).join(" ");
 
-            if(skills){
-               skills.innerHTML=skillContent;
+            if (skills) {
+                skills.innerHTML = skillContent;
+            }
+        } else if (activeTab === "about-me") {
+            const myinfo = document.querySelector(".my-info");
+            const infoList = [{
+                id: 1,
+                key: "Name: ",
+                value: " Vinay Soni",
+            }, {
+                id: 2,
+                key: "Country: ",
+                value: " India",
+            }, {
+                id: 3,
+                key: "Industry: ",
+                value: "SoftWare & IT",
+            }, {
+                id: 4,
+                key: "Experience: ",
+                value: "Fresher",
+            }, {
+                id: 5,
+                key: "Address: ",
+                value: "Jabalpur [482002], (MP)",
+            }];
+
+            const infoContent = infoList.map((ele) => {
+                return `
+                <div class="info-box" key=${ele?.id}>
+                <span>${ele?.key}</span>
+                <span>${ele?.value}</span>
+                </div>
+
+                `
+            }).join( " ");
+
+            if(myinfo){
+                myinfo.innerHTML=infoContent;
             }
         }
     })

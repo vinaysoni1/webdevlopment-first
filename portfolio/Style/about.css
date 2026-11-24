@@ -74,7 +74,8 @@ aside h2 span {
 }
 
 .experince-list,
-.education-list {
+.education-list,
+.my-info {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 2rem;
@@ -95,7 +96,8 @@ aside h2 span {
 
 .experince-list::-webkit-scrollbar,
 .education-list::-webkit-scrollbar,
-.skill-list::-webkit-scrollbar {
+.skill-list::-webkit-scrollbar,
+.my-info::-webkit-scrollbar {
     width: 5px;
 }
 
@@ -113,6 +115,11 @@ aside h2 span {
     background: var(--green);
     border-radius: 10px;
 }
+.my-info::-webkit-scrollbar-thumb {
+    background: var(--green);
+    border-radius: 10px;
+}
+
 
 .experince-box {
     display: flex;
@@ -145,6 +152,7 @@ aside h2 span {
     text-align: justify;
     display: -webkit-box;
     -webkit-line-clamp: 3;
+    line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -187,6 +195,18 @@ aside h2 span {
     grid-template-columns: repeat(3, 1fr);
 }
 
+.my-info{
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+.info-box{
+    display: grid;
+    
+}
+.info-box span:first-child{
+    color: var(--green);
+}
+
 @media screen and (width>=768px) {
 
     #about.content.active {
@@ -222,6 +242,11 @@ aside h2 span {
 
     .comapany-name p {
         font-size: 1.3rem;
+    }
+    .my-info{
+        grid-template-columns: repeat(2,1fr);
+        font-size: 1.7rem;
+        gap: 2rem 1rem;
     }
 }
 
